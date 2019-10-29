@@ -22,6 +22,10 @@ public class PlayerMovement : MonoBehaviour {
     public int loseOtherRivalryFactor; //interest
     public int winRivalryFactor; //interest
 
+    [Header("Opponent Name Text")]
+    public SpriteRenderer opponentName;
+    public Sprite[] opponentFightNameSprites;
+
     void Start(){
         Vector2 currentPos = transform.position;
         player = GetComponent<PlayerInfo>();
@@ -37,6 +41,8 @@ public class PlayerMovement : MonoBehaviour {
         npcs[5] = GameObject.Find("nadine");
         fightScreen = GameObject.Find("fight");
         fightScreen.SetActive(false);
+
+        opponentName = GameObject.Find("opponent fight name").GetComponent<SpriteRenderer>();
 
         switch (player.interest){
             case 0:
@@ -137,11 +143,7 @@ public class PlayerMovement : MonoBehaviour {
                     npcMove.inRange = false;
                 }
             }
-        }
-    }
-
-    void FixedUpdate(){
-        if (frozen != true){
+            
             MovePlayer();
         }
     }
@@ -151,29 +153,13 @@ public class PlayerMovement : MonoBehaviour {
         fighting = true;
         fightScreen.SetActive(true);
 
+        if(opponentName == null)
+            opponentName = GameObject.Find("opponent fight name").GetComponent<SpriteRenderer>();
+
+        opponentName.sprite = opponentFightNameSprites[opponent];
+
         yield return new WaitForSeconds(waitTime);
 
-        float playerRoll = Random.Range(0f, 100f) * (1f + 0.2f * player.savvy) * (1f + 0.1f * player.hostility);
-        float npcRoll = Random.Range(0f, 100f) * (1f + 0.2f * npcs[opponent].GetComponent<NPCInfo>().savvy) * (1f + 0.1f * npcs[opponent].GetComponent<NPCInfo>().hostility);
-        //npcs[opponent].GetComponent<NPCMovement>().Destroy(temp);
-
-        if (playerRoll >= npcRoll){ //player win
-            if (transform.position.x > npcs[opponent].transform.position.x){ //player is on right
-                npcs[opponent].GetComponent<NPCMovement>().temp = Instantiate(npcs[opponent].GetComponent<NPCMovement>().rightWinBubble, new Vector3((npcs[opponent].transform.position.x + transform.position.x) / 2, 1.45f, 0f), Quaternion.identity);
-            } else{
-                npcs[opponent].GetComponent<NPCMovement>().temp = Instantiate(npcs[opponent].GetComponent<NPCMovement>().leftWinBubble, new Vector3((npcs[opponent].transform.position.x + transform.position.x) / 2, 1.45f, 0f), Quaternion.identity);
-            }
-            ResolveFight(opponent, 0);
-            Debug.Log(playerRoll + " > " + npcRoll);
-        } else { //lose
-            if (transform.position.x > npcs[opponent].transform.position.x){ //player is on right
-                npcs[opponent].GetComponent<NPCMovement>().temp = Instantiate(npcs[opponent].GetComponent<NPCMovement>().leftWinBubble, new Vector3((npcs[opponent].transform.position.x + transform.position.x) / 2, 1.45f, 0f), Quaternion.identity);
-            } else{
-                npcs[opponent].GetComponent<NPCMovement>().temp = Instantiate(npcs[opponent].GetComponent<NPCMovement>().rightWinBubble, new Vector3((npcs[opponent].transform.position.x + transform.position.x) / 2, 1.45f, 0f), Quaternion.identity);
-            }
-            ResolveFight(opponent, 1);
-            Debug.Log(playerRoll + " < " + npcRoll);
-        }
         fightScreen.SetActive(false);
 
         npcs[opponent].GetComponent<NPCMovement>().UpdateRivals();

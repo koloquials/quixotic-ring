@@ -205,8 +205,10 @@ public class NPCMovement : MonoBehaviour {
 
     void Update(){
         if (frozen == false){
+            // If the player is nearby show the button text
             if (inRange == true){
                 commandText.SetActive(true);
+            // Otherwise they are hidden and the info screen is closed
             } else{
                 commandText.SetActive(false);
                 infoBox.SetActive(false);
@@ -214,6 +216,7 @@ public class NPCMovement : MonoBehaviour {
                 commandTextRenderer.sprite = cmd[0];
             }
 
+            // Toggles whether the info screen is open
             if (inRange && Input.GetKeyDown(KeyCode.E) && infoActive == false){
                 infoBox.SetActive(true);
                 infoActive = true;
@@ -224,14 +227,17 @@ public class NPCMovement : MonoBehaviour {
                 commandTextRenderer.sprite = cmd[0];
             }
 
+            // if your not angry and your not becoming frustrated run the frustrate coroutine
             if (isAngry == false && frustrating == false){
                 frustrate = StartCoroutine(Frustrate());
             }
 
+            // if your not moving and your not initiating movement and your not waiting start waiting
             if (moving == false && initiateMove == false && waiting == false){
                 wait = StartCoroutine(Wait(Random.Range(4, 10)));
             }
 
+            // if you should begin moving and you want to move right
             if (initiateMove && behaviorID == 0){ //right
                 waiting = false;
                 spriteRenderer.flipX = true;
@@ -239,6 +245,7 @@ public class NPCMovement : MonoBehaviour {
                 currentTime = 0f;
                 duration = Random.Range(4, 10);
                 moving = true;
+            // if you should begin moving and you want to move left
             } else if (initiateMove && behaviorID == 1){ //left
                 waiting = false;
                 spriteRenderer.flipX = false;
@@ -248,6 +255,7 @@ public class NPCMovement : MonoBehaviour {
                 moving = true;
             }
 
+            // if your moving
             if (moving){
                 //Debug.Log("walking! " + direction + " | duration: " + duration);
                 initiateMove = false;
@@ -274,19 +282,29 @@ public class NPCMovement : MonoBehaviour {
                 }
             }
 
+            // if the player is in range and pressed R and you're not already fighting and the player isn't fighting
             if (inRange && Input.GetKeyDown(KeyCode.R) && fighting == false && fightingPlayer == false){
+                // freeze the player
                 player.GetComponent<PlayerMovement>().Freeze();
+                // freeze me
                 Freeze();
+                // note that i'm fighting the player
                 fightingPlayer = true;
+                // on the player start the fight coroutine passing a random wait time and my rivalKey
                 player.GetComponent<PlayerMovement>().fight = StartCoroutine(player.GetComponent<PlayerMovement>().Fight(Random.Range(8, 14), npc.rivalKey - 1));
             }
 
+            // if i'm angry and i'm moving
             if (isAngry && moving){
+                // if the player isn't fighting and I'm near the player 
                 if (player.GetComponent<PlayerMovement>().fighting == false && Mathf.Abs(player.transform.position.x - transform.position.x) <= 4.45f && Mathf.Abs(player.transform.position.x - transform.position.x) >= 4.05f){
                     rand = Random.Range(0f, 100f) * (1f + 0.1f * npc.rivalries[0]);
                     Debug.Log(rand);
+                    // pick if we fight based on our rivalry
                     if (rand >= 80f){
                         Debug.Log("[PLAYER] fight!!!");
+
+                        // face the player
                         if (transform.position.x > player.transform.position.x){
                             //this npc is on the right
                             spriteRenderer.flipX = false;
@@ -309,7 +327,9 @@ public class NPCMovement : MonoBehaviour {
                 }
             }
 
+            // if i'm angry and moving
             if (isAngry && moving){
+                // check each npc
                 for (int i = 0; i < 6; i++){
                     if (i != npc.rivalKey-1 && othernpcs[i].GetComponent<NPCMovement>().fightingPlayer == false && othernpcs[i].GetComponent<NPCMovement>().fighting == false && 
                         Mathf.Abs(othernpcs[i].transform.position.x - transform.position.x) <= 4.35f && Mathf.Abs(othernpcs[i].transform.position.x - transform.position.x) >= 4.15f){
@@ -345,10 +365,11 @@ public class NPCMovement : MonoBehaviour {
 
         }
 
+        // if i'm fighting and waiting start the FightWait coroutine
         if (fighting && waiting == false){
             fight = StartCoroutine(FightWait(Random.Range(8, 14)));
         }
-
+        
         if (keepResult && resWaiting == false){
             resultPersist = StartCoroutine(PersistRes(3.8f));
         }
