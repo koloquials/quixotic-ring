@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 3ff00a1f990fc437c83d8450b8eb16a3
+guid: ac922b8499b91463c82df845abf6671a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 21300000
-    second: zodisc res sheet_0
+      213: -6943476427974939830
+    second: test result archetypes_0
   - first:
-      213: 21300002
-    second: zodisc res sheet_1
+      213: -6212186148320916237
+    second: test result archetypes_1
   - first:
-      213: 21300004
-    second: zodisc res sheet_2
+      213: -3358243384260792520
+    second: test result archetypes_2
   - first:
-      213: 21300006
-    second: zodisc res sheet_3
+      213: 8893159597203824273
+    second: test result archetypes_3
   - first:
-      213: 21300008
-    second: zodisc res sheet_4
+      213: -1897835710408183720
+    second: test result archetypes_4
   - first:
-      213: 21300010
-    second: zodisc res sheet_5
+      213: 489729398991965164
+    second: test result archetypes_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -78,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -90,7 +90,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -102,7 +102,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zodisc res sheet_0
+      name: test result archetypes_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 425
-        width: 270
-        height: 425
+        y: 454.16666
+        width: 554
+        height: 90.833336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,62 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ba3a4380fe2b4808b04b21b3069ee67
-      internalID: 21300000
+      spriteID: 731b7863ba7264af4bacdddfde83aa7f
+      internalID: -6943476427974939830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zodisc res sheet_1
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 425
-        width: 270
-        height: 425
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd65566b46ca9462c8efa159e20e865d
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zodisc res sheet_2
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 425
-        width: 270
-        height: 425
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b952c501745cb496785eee1e8e446fcd
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zodisc res sheet_3
+      name: test result archetypes_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 270
-        height: 425
+        y: 364.16666
+        width: 554
+        height: 90.833336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 326f6396168f6405ab2efdc9cbc0ca84
-      internalID: 21300006
+      spriteID: a2467a9e79e6f49479c9e2e89e3d8f51
+      internalID: -6212186148320916237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zodisc res sheet_4
+      name: test result archetypes_2
       rect:
         serializedVersion: 2
-        x: 270
-        y: 0
-        width: 270
-        height: 425
+        x: 0
+        y: 274.16666
+        width: 554
+        height: 90.833336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9db98ec8f8fa042219dae7358e7522de
-      internalID: 21300008
+      spriteID: 10798d971019449df97138dbf06dbecc
+      internalID: -3358243384260792520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zodisc res sheet_5
+      name: test result archetypes_3
       rect:
         serializedVersion: 2
-        x: 540
-        y: 0
-        width: 270
-        height: 425
+        x: 0
+        y: 184.16666
+        width: 554
+        height: 90.833336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +193,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0dc311ccf98849918371d0d57f8e1dd
-      internalID: 21300010
+      spriteID: 7ecaf599c3cf84403bacb0c6edade7a0
+      internalID: 8893159597203824273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test result archetypes_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94.166664
+        width: 554
+        height: 90.833336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5bc6e56d8cd4c41bc4a15411997eb1
+      internalID: -1897835710408183720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test result archetypes_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4.166664
+        width: 554
+        height: 90.833336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb7fd40231da477bb3d8b4b8db7a5b8
+      internalID: 489729398991965164
       vertices: []
       indices: 
       edges: []
@@ -244,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0ade5226dc89b442d9f4631d3b086fee
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
