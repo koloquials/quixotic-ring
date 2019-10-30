@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 3ff00a1f990fc437c83d8450b8eb16a3
+guid: 8009d63db03fb4a4e91180a0891b4ac8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 21300000
-    second: zodisc res sheet_0
+      213: 4270575483508877251
+    second: test slider_0
   - first:
-      213: 21300002
-    second: zodisc res sheet_1
+      213: -7741123344667782956
+    second: test slider_1
   - first:
-      213: 21300004
-    second: zodisc res sheet_2
+      213: -5318021745993929645
+    second: test slider_2
   - first:
-      213: 21300006
-    second: zodisc res sheet_3
+      213: -2130659372224218955
+    second: test slider_3
   - first:
-      213: 21300008
-    second: zodisc res sheet_4
-  - first:
-      213: 21300010
-    second: zodisc res sheet_5
+      213: 6539721440146231746
+    second: test slider_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -78,7 +75,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -90,7 +87,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -102,7 +99,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -116,76 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zodisc res sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 425
-        width: 270
-        height: 425
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ba3a4380fe2b4808b04b21b3069ee67
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zodisc res sheet_1
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 425
-        width: 270
-        height: 425
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd65566b46ca9462c8efa159e20e865d
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zodisc res sheet_2
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 425
-        width: 270
-        height: 425
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b952c501745cb496785eee1e8e446fcd
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zodisc res sheet_3
+      name: test slider_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 270
-        height: 425
+        width: 300
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 326f6396168f6405ab2efdc9cbc0ca84
-      internalID: 21300006
+      spriteID: 94d5cdc7208a446bca8b028a1658045e
+      internalID: 4270575483508877251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zodisc res sheet_4
+      name: test slider_1
       rect:
         serializedVersion: 2
-        x: 270
+        x: 300
         y: 0
-        width: 270
-        height: 425
+        width: 300
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +148,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9db98ec8f8fa042219dae7358e7522de
-      internalID: 21300008
+      spriteID: 58bec039e3f8341e0b20394404b976f5
+      internalID: -7741123344667782956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zodisc res sheet_5
+      name: test slider_2
       rect:
         serializedVersion: 2
-        x: 540
+        x: 600
         y: 0
-        width: 270
-        height: 425
+        width: 300
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +169,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0dc311ccf98849918371d0d57f8e1dd
-      internalID: 21300010
+      spriteID: f48c1243ede524f9b82fd9002bf76104
+      internalID: -5318021745993929645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test slider_3
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 300
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848e59d40e73648098af1fce39200ff8
+      internalID: -2130659372224218955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test slider_4
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 300
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c5f963f6e054da7b076d476b29b842
+      internalID: 6539721440146231746
       vertices: []
       indices: 
       edges: []
@@ -244,7 +220,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0ade5226dc89b442d9f4631d3b086fee
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
