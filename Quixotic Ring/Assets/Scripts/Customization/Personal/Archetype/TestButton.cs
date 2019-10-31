@@ -5,6 +5,8 @@ using UnityEngine;
 public class TestButton : MonoBehaviour {
     public Sprite[] sprites = new Sprite[2];
 
+    public GameObject testMenu;
+
     private SpriteRenderer spriteRenderer;
     void Start () {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -24,5 +26,10 @@ public class TestButton : MonoBehaviour {
     void OnMouseExit()
     {
         spriteRenderer.sprite = sprites[0];
+    }
+
+    private void OnMouseDown()
+    {
+        testMenu.SetActive(true);
     }
 }

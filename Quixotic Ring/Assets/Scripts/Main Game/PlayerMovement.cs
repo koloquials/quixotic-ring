@@ -26,6 +26,15 @@ public class PlayerMovement : MonoBehaviour {
     public SpriteRenderer opponentName;
     public Sprite[] opponentFightNameSprites;
 
+    [Header("Fighting")]
+    public int oRow;
+    public int oKey;
+
+
+    private KeyCode[] topRowKeys = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.T, KeyCode.Y, KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P };
+    private KeyCode[] midRowKeys = { KeyCode.A, KeyCode.S, KeyCode.D, KeyCode.F, KeyCode.G, KeyCode.H, KeyCode.J, KeyCode.K, KeyCode.L, KeyCode.Semicolon };
+    private KeyCode[] botRowKeys = { KeyCode.Z, KeyCode.X, KeyCode.C, KeyCode.V, KeyCode.B, KeyCode.N, KeyCode.M, KeyCode.Comma, KeyCode.Period };
+
     void Start(){
         Vector2 currentPos = transform.position;
         player = GetComponent<PlayerInfo>();
@@ -149,27 +158,40 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public IEnumerator Fight(float waitTime, int opponent){
+        // log that we're fighting
         Debug.Log("(PLAYER FIGHT) waiting! " + Time.time);
         fighting = true;
         fightScreen.SetActive(true);
 
+        // find the opponent name image if we haven't yet
         if(opponentName == null)
             opponentName = GameObject.Find("opponent fight name").GetComponent<SpriteRenderer>();
-
+        // set the opponent's name to whoever we're fighting
         opponentName.sprite = opponentFightNameSprites[opponent];
+
+        // Opponent picks a random key in a random row
+        oRow = Random.Range(0, 3);
+        oKey = oRow == 2 ? Random.Range(0, 10) : Random.Range(1, 11);
 
         yield return new WaitForSeconds(waitTime);
 
+        // close the fighting screen
         fightScreen.SetActive(false);
 
+        // update the opponent and then resume them
         npcs[opponent].GetComponent<NPCMovement>().UpdateRivals();
         npcs[opponent].GetComponent<NPCMovement>().Resume();
+        // resume myself
         Resume();
+        // make the opponent not angry, tell them they aren't fighting the player, they aren't waiting, and telling them to keep the result
         npcs[opponent].GetComponent<NPCMovement>().isAngry = false;
         npcs[opponent].GetComponent<NPCMovement>().fightingPlayer = false;
         npcs[opponent].GetComponent<NPCMovement>().waiting = false;
         npcs[opponent].GetComponent<NPCMovement>().keepResult = true;
+        // not that i'm not fighting
         fighting = false;
+
+        yield return null;
     }
 
     public void ResolveFight(int opponent, int i){
