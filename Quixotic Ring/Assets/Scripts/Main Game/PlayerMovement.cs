@@ -22,6 +22,19 @@ public class PlayerMovement : MonoBehaviour {
     public int loseOtherRivalryFactor; //interest
     public int winRivalryFactor; //interest
 
+    [Header("Opponent Name Text")]
+    public SpriteRenderer opponentName;
+    public Sprite[] opponentFightNameSprites;
+
+    [Header("Fighting")]
+    public int oRow;
+    public int oKey;
+
+
+    private KeyCode[] topRowKeys = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.T, KeyCode.Y, KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P };
+    private KeyCode[] midRowKeys = { KeyCode.A, KeyCode.S, KeyCode.D, KeyCode.F, KeyCode.G, KeyCode.H, KeyCode.J, KeyCode.K, KeyCode.L, KeyCode.Semicolon };
+    private KeyCode[] botRowKeys = { KeyCode.Z, KeyCode.X, KeyCode.C, KeyCode.V, KeyCode.B, KeyCode.N, KeyCode.M, KeyCode.Comma, KeyCode.Period };
+
     void Start(){
         Vector2 currentPos = transform.position;
         player = GetComponent<PlayerInfo>();
@@ -37,6 +50,8 @@ public class PlayerMovement : MonoBehaviour {
         npcs[5] = GameObject.Find("nadine");
         fightScreen = GameObject.Find("fight");
         fightScreen.SetActive(false);
+
+        opponentName = GameObject.Find("opponent fight name").GetComponent<SpriteRenderer>();
 
         switch (player.interest){
             case 0:
@@ -137,53 +152,46 @@ public class PlayerMovement : MonoBehaviour {
                     npcMove.inRange = false;
                 }
             }
-        }
-    }
-
-    void FixedUpdate(){
-        if (frozen != true){
+            
             MovePlayer();
         }
     }
 
     public IEnumerator Fight(float waitTime, int opponent){
+        // log that we're fighting
         Debug.Log("(PLAYER FIGHT) waiting! " + Time.time);
         fighting = true;
         fightScreen.SetActive(true);
 
+        // find the opponent name image if we haven't yet
+        if(opponentName == null)
+            opponentName = GameObject.Find("opponent fight name").GetComponent<SpriteRenderer>();
+        // set the opponent's name to whoever we're fighting
+        opponentName.sprite = opponentFightNameSprites[opponent];
+
+        // Opponent picks a random key in a random row
+        oRow = Random.Range(0, 3);
+        oKey = oRow == 2 ? Random.Range(0, 10) : Random.Range(1, 11);
+
         yield return new WaitForSeconds(waitTime);
 
-        float playerRoll = Random.Range(0f, 100f) * (1f + 0.2f * player.savvy) * (1f + 0.1f * player.hostility);
-        float npcRoll = Random.Range(0f, 100f) * (1f + 0.2f * npcs[opponent].GetComponent<NPCInfo>().savvy) * (1f + 0.1f * npcs[opponent].GetComponent<NPCInfo>().hostility);
-        //npcs[opponent].GetComponent<NPCMovement>().Destroy(temp);
-
-        if (playerRoll >= npcRoll){ //player win
-            if (transform.position.x > npcs[opponent].transform.position.x){ //player is on right
-                npcs[opponent].GetComponent<NPCMovement>().temp = Instantiate(npcs[opponent].GetComponent<NPCMovement>().rightWinBubble, new Vector3((npcs[opponent].transform.position.x + transform.position.x) / 2, 1.45f, 0f), Quaternion.identity);
-            } else{
-                npcs[opponent].GetComponent<NPCMovement>().temp = Instantiate(npcs[opponent].GetComponent<NPCMovement>().leftWinBubble, new Vector3((npcs[opponent].transform.position.x + transform.position.x) / 2, 1.45f, 0f), Quaternion.identity);
-            }
-            ResolveFight(opponent, 0);
-            Debug.Log(playerRoll + " > " + npcRoll);
-        } else { //lose
-            if (transform.position.x > npcs[opponent].transform.position.x){ //player is on right
-                npcs[opponent].GetComponent<NPCMovement>().temp = Instantiate(npcs[opponent].GetComponent<NPCMovement>().leftWinBubble, new Vector3((npcs[opponent].transform.position.x + transform.position.x) / 2, 1.45f, 0f), Quaternion.identity);
-            } else{
-                npcs[opponent].GetComponent<NPCMovement>().temp = Instantiate(npcs[opponent].GetComponent<NPCMovement>().rightWinBubble, new Vector3((npcs[opponent].transform.position.x + transform.position.x) / 2, 1.45f, 0f), Quaternion.identity);
-            }
-            ResolveFight(opponent, 1);
-            Debug.Log(playerRoll + " < " + npcRoll);
-        }
+        // close the fighting screen
         fightScreen.SetActive(false);
 
+        // update the opponent and then resume them
         npcs[opponent].GetComponent<NPCMovement>().UpdateRivals();
         npcs[opponent].GetComponent<NPCMovement>().Resume();
+        // resume myself
         Resume();
+        // make the opponent not angry, tell them they aren't fighting the player, they aren't waiting, and telling them to keep the result
         npcs[opponent].GetComponent<NPCMovement>().isAngry = false;
         npcs[opponent].GetComponent<NPCMovement>().fightingPlayer = false;
         npcs[opponent].GetComponent<NPCMovement>().waiting = false;
         npcs[opponent].GetComponent<NPCMovement>().keepResult = true;
+        // not that i'm not fighting
         fighting = false;
+
+        yield return null;
     }
 
     public void ResolveFight(int opponent, int i){
