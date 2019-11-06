@@ -1,0 +1,21 @@
+{"frames": [
+
+{
+	"filename": "wish.png",
+	"frame": {"x":1,"y":1,"w":41,"h":45},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":2,"w":41,"h":45},
+	"sourceSize": {"w":42,"h":48},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "WishTextureAtlas.png",
+	"format": "RGBA8888",
+	"size": {"w":43,"h":47},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:73abbe875a66948a0d355381843ecc94:57bd8516dbd4727b937efb0ba29cfb1a:3440cc3d439a218bc9c814282bcec430$"
+}
+}
