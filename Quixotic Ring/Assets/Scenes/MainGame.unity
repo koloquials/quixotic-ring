@@ -1208,6 +1208,38 @@ Transform:
   m_Father: {fileID: 1713342553}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &129057323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6536710038195102045, guid: 71443d00cad01644a8fc210598e83210,
+    type: 3}
+  m_PrefabInstance: {fileID: 1492590101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &129057325
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129057323}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 14.5, y: 3.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.2, y: 10.8}
+  m_EdgeRadius: 0
 --- !u!1 &141333998
 GameObject:
   m_ObjectHideFlags: 0
@@ -17808,6 +17840,292 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1492590101
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6536710037925526434, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_Name
+      value: text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526434, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0470919
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951795, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039635719975, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[0]
+      value: welcome. welcome at last to the ring.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[1]
+      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
+        it for all of you. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[2]
+      value: 'this is where you mix and mingle, and observe the other competitors
+        going about their business.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[3]
+      value: 'there are parts of you that are your inherent nature, your predisposition.
+        other parts are comprised of your lived values and beliefs. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[4]
+      value: "your spats, when you have them you\u2019ll be taking them to a stage.
+        otherwise you\u2019ll spend the whole of your time in this lobby."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[5]
+      value: "we invite an audience too, you know, though you won\u2019t see them
+        when you\u2019re fighting. revel in the knowledge of their presence, or don\u2019t."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[6]
+      value: "your %hostility$ and %savvy$ will find use in these encounters. as will
+        your opponent\u2019s. we\u2019ll explain more once you\u2019re in the thick
+        of it."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[7]
+      value: half of it, your zodiac, was decided long before you found your way here.
+        the other half, we will appraise through a test or your own self-evaluation.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[8]
+      value: meanwhile, your %interest$ and %grudge$ determine how much your rivalry
+        with an individual grows. though it also depends on who wins, and who loses.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[9]
+      value: "if you can become the greatest rival of everyone here, we\u2019ll give
+        you a @ little something. any wish that\u2019s in our power to grant."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: finishBehavior
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[10]
+      value: "maybe you\u2019ll learn something else in your time here. maybe you
+        won\u2019t. we just observe you."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[11]
+      value: "and of course, you\u2019ll have to fight everyone, to become their rivals.
+        we\u2019re sure they\u2019re eager to get to know you, too."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[12]
+      value: "take care, that individuals can only balance a certain number of rivals.
+        you\u2019re our newest addition, and some patrons\u2019 bonds are already
+        deeply ingrained. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[13]
+      value: "also, you will have to ask each other to fight. they may say no, if
+        they aren\u2019t riled up enough at the moment, or aren\u2019t keen on you."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[14]
+      value: "why don\u2019t you request a fight now? try approaching someone. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_textInfo.materialCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_text
+      value: 'what is a mask? a necessity, if you are to spar with us. it is a combination
+        of two things your <color=#FFB8BD>zodiac</color> and your #archetype$.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951806, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951806, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039635719972, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 6536710039635719972, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_spriteAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039635719972, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039635719972, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_isDefaultMaterial
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039635719972, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_padding
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039635719972, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039685392046, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039635719973, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_Name
+      value: TMP SubMesh [Ikaros-Regular SDF Material + LiberationSans SDF Atlas]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039635719974, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71443d00cad01644a8fc210598e83210, type: 3}
 --- !u!1 &1499082833
 GameObject:
   m_ObjectHideFlags: 0

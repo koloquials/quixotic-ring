@@ -280,5 +280,46 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[11]
+      value: of course, you are free to leave at any instant, we will not keep you.
+        we assume you already know how. you knew how to show up, after all.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951806, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951806, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71443d00cad01644a8fc210598e83210, type: 3}

@@ -1947,7 +1947,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312421102}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcba2ec2d18b24b1181b60d088640dc5, type: 3}
   m_Name: 
@@ -1966,7 +1966,7 @@ MonoBehaviour:
   loseTargetRivalryFactor: 0
   loseOtherRivalryFactor: 0
   winRivalryFactor: 0
-  opponentName: {fileID: 0}
+  opponentName: {fileID: 1895580033}
   opponentFightNameSprites:
   - {fileID: 21300010, guid: 80dddcaf90998496488cb2330f570fb8, type: 3}
   - {fileID: 21300002, guid: 80dddcaf90998496488cb2330f570fb8, type: 3}
@@ -2032,6 +2032,7 @@ MonoBehaviour:
   - {fileID: 21300010, guid: 305eb7f638f4748718e02984be869f62, type: 3}
   - {fileID: 21300040, guid: 305eb7f638f4748718e02984be869f62, type: 3}
   questionMark: {fileID: 21300058, guid: 305eb7f638f4748718e02984be869f62, type: 3}
+  fightBar: {fileID: 0}
 --- !u!50 &312421107
 Rigidbody2D:
   serializedVersion: 4
@@ -4781,7 +4782,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526434, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526439, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -4838,6 +4839,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6536710038878951795, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039635719975, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
@@ -4857,19 +4868,19 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: what is a mask? a necessity, if you are to spar with us. it is a combination
-        of two things your %zodiac$ and your %archetype$.
+      value: 'what is a mask? a necessity, if you are to spar with us. it is a combination
+        of two things: your %zodiac$ and your %archetype$.'
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: there are parts of you that are your inherent nature, your predisposition.
-        other parts comprised of your lived values and beliefs.
+      value: 'there are parts of you that are your inherent nature, your predisposition.
+        other parts are comprised of your lived values and beliefs. '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[4]
-      value: together, they make you. perhaps, asimplified yet exaggerated representation
+      value: together, they make you. perhaps, a simplified yet exaggerated representation
         of you. but you, in some form. hence, a mask.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
@@ -4881,15 +4892,14 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[6]
-      value: it's not everyone's speed. we know that. the jist is that you will enter
-        the stage with your newly crafted persona.
+      value: it's not everyone's speed. we know that. the summary is that you will
+        enter the stage with your newly crafted persona.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[7]
-      value: half of it, your zodiac, has been decided for you long before you found
-        your way here. the other half, we will appraise through a test or your own
-        self-evaluation.
+      value: half of it, your zodiac, was decided long before you found your way here.
+        the other half, we will appraise through a test or your own self-evaluation.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -4944,25 +4954,25 @@ PrefabInstance:
       value: 'what is a mask? a necessity, if you are to spar with us. it is a combination
         of two things your <color=#FFB8BD>zodiac</color> and your #archetype$.'
       objectReference: {fileID: 0}
-    - target: {fileID: 6536710038878951795, guid: 71443d00cad01644a8fc210598e83210,
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_fontSize
+      value: 5.2
       objectReference: {fileID: 0}
-    - target: {fileID: 6536710039635719973, guid: 71443d00cad01644a8fc210598e83210,
+    - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
-      propertyPath: m_Name
-      value: TMP SubMesh [Ikaros-Regular SDF Material + LiberationSans SDF Atlas]
+      propertyPath: m_fontSizeBase
+      value: 5.2
       objectReference: {fileID: 0}
-    - target: {fileID: 6536710039635719974, guid: 71443d00cad01644a8fc210598e83210,
+    - target: {fileID: 6536710038878951806, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
+      propertyPath: m_AnchoredPosition.x
+      value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 6536710039635719975, guid: 71443d00cad01644a8fc210598e83210,
+    - target: {fileID: 6536710038878951806, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_AnchoredPosition.y
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710039635719972, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -4993,12 +5003,22 @@ PrefabInstance:
     - target: {fileID: 6536710039635719972, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710039685392046, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039635719973, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_Name
+      value: TMP SubMesh [Ikaros-Regular SDF Material + LiberationSans SDF Atlas]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710039635719974, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71443d00cad01644a8fc210598e83210, type: 3}
