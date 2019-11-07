@@ -1,39 +1,99 @@
 fileFormatVersion: 2
 guid: 305eb7f638f4748718e02984be869f62
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: fight keys_0
-    21300002: fight keys_1
-    21300004: fight keys_2
-    21300006: fight keys_3
-    21300008: fight keys_4
-    21300010: fight keys_5
-    21300012: fight keys_6
-    21300014: fight keys_7
-    21300016: fight keys_8
-    21300018: fight keys_9
-    21300020: fight keys_10
-    21300022: fight keys_11
-    21300024: fight keys_12
-    21300026: fight keys_13
-    21300028: fight keys_14
-    21300030: fight keys_15
-    21300032: fight keys_16
-    21300034: fight keys_17
-    21300036: fight keys_18
-    21300038: fight keys_19
-    21300040: fight keys_20
-    21300042: fight keys_21
-    21300044: fight keys_22
-    21300046: fight keys_23
-    21300048: fight keys_24
-    21300050: fight keys_25
-    21300052: fight keys_26
-    21300054: fight keys_27
-    21300056: fight keys_28
-    21300058: fight keys_29
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: q
+  - first:
+      213: 21300002
+    second: w
+  - first:
+      213: 21300004
+    second: e
+  - first:
+      213: 21300006
+    second: r
+  - first:
+      213: 21300008
+    second: t
+  - first:
+      213: 21300010
+    second: y
+  - first:
+      213: 21300012
+    second: u
+  - first:
+      213: 21300014
+    second: i
+  - first:
+      213: 21300016
+    second: o
+  - first:
+      213: 21300018
+    second: p
+  - first:
+      213: 21300020
+    second: a
+  - first:
+      213: 21300022
+    second: s
+  - first:
+      213: 21300024
+    second: d
+  - first:
+      213: 21300026
+    second: f
+  - first:
+      213: 21300028
+    second: g
+  - first:
+      213: 21300030
+    second: h
+  - first:
+      213: 21300032
+    second: j
+  - first:
+      213: 21300034
+    second: k
+  - first:
+      213: 21300036
+    second: l
+  - first:
+      213: 21300038
+    second: ;
+  - first:
+      213: 21300040
+    second: z
+  - first:
+      213: 21300042
+    second: x
+  - first:
+      213: 21300044
+    second: c
+  - first:
+      213: 21300046
+    second: v
+  - first:
+      213: 21300048
+    second: b
+  - first:
+      213: 21300050
+    second: n
+  - first:
+      213: 21300052
+    second: m
+  - first:
+      213: 21300054
+    second: ','
+  - first:
+      213: 21300056
+    second: period
+  - first:
+      213: 21300058
+    second: question
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -88,7 +148,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
     resizeAlgorithm: 0
@@ -99,7 +159,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 4096
     resizeAlgorithm: 0
@@ -110,7 +171,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 4096
     resizeAlgorithm: 0
@@ -121,11 +183,12 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fight keys_0
+      name: q
       rect:
         serializedVersion: 2
         x: 0
@@ -133,19 +196,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: a4b283ec844964906b5da8afcc447226
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_1
+      name: w
       rect:
         serializedVersion: 2
         x: 55
@@ -153,19 +217,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 511d7ac2a817446f396c67baa76dbcde
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_2
+      name: e
       rect:
         serializedVersion: 2
         x: 110
@@ -173,19 +238,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 7c94045795d5c480f8f637d5862dc66e
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_3
+      name: r
       rect:
         serializedVersion: 2
         x: 165
@@ -193,19 +259,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: ab5728535003d4a45b2a15d84da2745d
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_4
+      name: t
       rect:
         serializedVersion: 2
         x: 220
@@ -213,19 +280,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 15ff3dab621f84036995fc08d97301d5
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_5
+      name: y
       rect:
         serializedVersion: 2
         x: 275
@@ -233,19 +301,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 4346e2dad9745437fa2795bcbfcfb9dd
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_6
+      name: u
       rect:
         serializedVersion: 2
         x: 330
@@ -253,19 +322,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 1a6a11dbd924448e6bb90d789087a296
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_7
+      name: i
       rect:
         serializedVersion: 2
         x: 385
@@ -273,19 +343,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: f07ef7a737aae49aebe2017696b9a70e
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_8
+      name: o
       rect:
         serializedVersion: 2
         x: 440
@@ -293,19 +364,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 67d0a13f8cda1487b80b14079d37b714
+      internalID: 21300016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_9
+      name: p
       rect:
         serializedVersion: 2
         x: 495
@@ -313,19 +385,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 402227a086a6841ea8a92f6d816f4164
+      internalID: 21300018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_10
+      name: a
       rect:
         serializedVersion: 2
         x: 0
@@ -333,19 +406,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 77e80cf2723b34978a65a59f804865df
+      internalID: 21300020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_11
+      name: s
       rect:
         serializedVersion: 2
         x: 55
@@ -353,19 +427,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 246c4d511b46a4c0ead6dc3379afc948
+      internalID: 21300022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_12
+      name: d
       rect:
         serializedVersion: 2
         x: 110
@@ -373,19 +448,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 1fe00e5a62ee3431da43f3622c50905a
+      internalID: 21300024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_13
+      name: f
       rect:
         serializedVersion: 2
         x: 165
@@ -393,19 +469,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 0f4cbdf45806b4f98a0cb00c0b5c1ecc
+      internalID: 21300026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_14
+      name: g
       rect:
         serializedVersion: 2
         x: 220
@@ -413,19 +490,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: fcc9603be818c49559020bbf5e11f52a
+      internalID: 21300028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_15
+      name: h
       rect:
         serializedVersion: 2
         x: 275
@@ -433,19 +511,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 4a2633a579f3d4febb97e42e54bda619
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_16
+      name: j
       rect:
         serializedVersion: 2
         x: 330
@@ -453,19 +532,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 86cc11d0fc8bc4abbb0181aba21532df
+      internalID: 21300032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_17
+      name: k
       rect:
         serializedVersion: 2
         x: 385
@@ -473,19 +553,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 09a6eb115f0d34fe69bfbde4cc295ad9
+      internalID: 21300034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_18
+      name: l
       rect:
         serializedVersion: 2
         x: 440
@@ -493,19 +574,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: c5a831dc4e3a644d7949fee882e5f7a9
+      internalID: 21300036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_19
+      name: ;
       rect:
         serializedVersion: 2
         x: 495
@@ -513,19 +595,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 01f1ef2757ef64331873ce0018137692
+      internalID: 21300038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_20
+      name: z
       rect:
         serializedVersion: 2
         x: 0
@@ -533,19 +616,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 7e63a15221b2148c78fbe2ef914438a3
+      internalID: 21300040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_21
+      name: x
       rect:
         serializedVersion: 2
         x: 55
@@ -553,19 +637,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 4a1c32d21228b4e3888291e040e67f4f
+      internalID: 21300042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_22
+      name: c
       rect:
         serializedVersion: 2
         x: 110
@@ -573,19 +658,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: cb7adefc48cfa4ed8a66891df30795c8
+      internalID: 21300044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_23
+      name: v
       rect:
         serializedVersion: 2
         x: 165
@@ -593,19 +679,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: e27b55187ae1f407581552e5a5ad70a2
+      internalID: 21300046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_24
+      name: b
       rect:
         serializedVersion: 2
         x: 220
@@ -613,19 +700,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: bf2221d9a26da4223b03cc3692f156d5
+      internalID: 21300048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_25
+      name: n
       rect:
         serializedVersion: 2
         x: 275
@@ -633,19 +721,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: fc56397cbaddb4c0e859a1f951acc11a
+      internalID: 21300050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_26
+      name: m
       rect:
         serializedVersion: 2
         x: 330
@@ -653,19 +742,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: b05d97b2c2369468396109a83d82d652
+      internalID: 21300052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_27
+      name: ','
       rect:
         serializedVersion: 2
         x: 385
@@ -673,19 +763,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 17c569a3c9a1a4f88840c98f3f3b1b19
+      internalID: 21300054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_28
+      name: period
       rect:
         serializedVersion: 2
         x: 440
@@ -693,19 +784,20 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 5468a00358aa5477fb75be122e67f631
+      internalID: 21300056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fight keys_29
+      name: question
       rect:
         serializedVersion: 2
         x: 495
@@ -713,13 +805,14 @@ TextureImporter:
         width: 55
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 92dfa409efd12466189d759c28802815
+      internalID: 21300058
       vertices: []
       indices: 
       edges: []
@@ -728,10 +821,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 12613d2a43bca46fdac5b2dfb888aaac
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -29,11 +29,90 @@ public class PlayerMovement : MonoBehaviour {
     [Header("Fighting")]
     public int oRow;
     public int oKey;
+    public KeyCode oKeyCode ()
+    {
+        switch(oRow)
+        {
+            case 0:
+                return topRowKeys[oKey];
+            case 1:
+                return midRowKeys[oKey];
+            case 2:
+                return botRowKeys[oKey];
+        }
+        return KeyCode.Space;
+    }
+    public KeyCode pKeyCode;
+    public int pRow ()
+    {
+        foreach (KeyCode k in topRowKeys)
+            if (k == pKeyCode)
+                return 0;
+        foreach (KeyCode k in midRowKeys)
+            if (k == pKeyCode)
+                return 1;
+        foreach (KeyCode k in botRowKeys)
+            if (k == pKeyCode)
+                return 2;
+        return 0;
+    }
+    public int pKey ()
+    {
+        for (int i = 0; i < topRowKeys.Length; i++)
+        {
+            if (topRowKeys[i] == pKeyCode)
+                return i;
+        }
+        for (int i = 0; i < midRowKeys.Length; i++)
+        {
+            if (midRowKeys[i] == pKeyCode)
+                return i;
+        }
+        for (int i = 0; i < botRowKeys.Length; i++)
+        {
+            if (botRowKeys[i] == pKeyCode)
+                return i;
+        }
+        return -1;
+    }
+    public float score;
+    public float secondsPerOpponentPress;
+    private float opponentTimer;
+    public float opponentAttackTimer;
+    public float playerAttackTimer;
+    public bool oStunned;
 
+    [Header("Fight Screen")]
+    public SpriteRenderer oTopRend;
+    public SpriteRenderer oMidRend;
+    public SpriteRenderer oBotRend;
+    public SpriteRenderer oTopKey;
+    public SpriteRenderer oMidKey;
+    public SpriteRenderer oBotKey;
+    public Sprite oInactive;
+    public Sprite oWinning, oLosing;
+
+    public SpriteRenderer pTopRend;
+    public SpriteRenderer pMidRend;
+    public SpriteRenderer pBotRend;
+    public SpriteRenderer pTopKey;
+    public SpriteRenderer pMidKey;
+    public SpriteRenderer pBotKey;
+    public Sprite pInactive;
+    public Sprite pWinning, pLosing;
+
+    public Sprite[] fightCharacters;
+    public Sprite questionMark;
+
+    public Transform fightBar;
 
     private KeyCode[] topRowKeys = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.T, KeyCode.Y, KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P };
     private KeyCode[] midRowKeys = { KeyCode.A, KeyCode.S, KeyCode.D, KeyCode.F, KeyCode.G, KeyCode.H, KeyCode.J, KeyCode.K, KeyCode.L, KeyCode.Semicolon };
     private KeyCode[] botRowKeys = { KeyCode.Z, KeyCode.X, KeyCode.C, KeyCode.V, KeyCode.B, KeyCode.N, KeyCode.M, KeyCode.Comma, KeyCode.Period };
+
+    private int currentOpponent;
+
+    private Coroutine oSwitch;
 
     void Start(){
         Vector2 currentPos = transform.position;
@@ -49,9 +128,40 @@ public class PlayerMovement : MonoBehaviour {
         npcs[4] = GameObject.Find("clemise");
         npcs[5] = GameObject.Find("nadine");
         fightScreen = GameObject.Find("fight");
-        fightScreen.SetActive(false);
 
-        opponentName = GameObject.Find("opponent fight name").GetComponent<SpriteRenderer>();
+        if (opponentName == null)
+        {
+            opponentName = GameObject.Find("opponent fight name").GetComponent<SpriteRenderer>();
+        }
+        if (oTopRend == null)
+            oTopRend = GameObject.Find("top button (opponent)").GetComponent<SpriteRenderer>();
+        if (oMidRend == null)
+            oMidRend = GameObject.Find("mid button (opponent)").GetComponent<SpriteRenderer>();
+        if (oBotRend == null)
+            oBotRend = GameObject.Find("bot button (opponent)").GetComponent<SpriteRenderer>();
+        if (oTopKey == null)
+            oTopKey = GameObject.Find("top key (opponent)").GetComponent<SpriteRenderer>();
+        if (oMidKey == null)
+            oMidKey = GameObject.Find("mid key (opponent)").GetComponent<SpriteRenderer>();
+        if (oBotKey == null)
+            oBotKey = GameObject.Find("bot key (opponent)").GetComponent<SpriteRenderer>();
+
+        if (pTopRend == null)
+            pTopRend = GameObject.Find("top button (player)").GetComponent<SpriteRenderer>();
+        if (pMidRend == null)
+            pMidRend = GameObject.Find("mid button (player)").GetComponent<SpriteRenderer>();
+        if (pBotRend == null)
+            pBotRend = GameObject.Find("bot button (player)").GetComponent<SpriteRenderer>();
+        if (pTopKey == null)
+            pTopKey = GameObject.Find("top key (player)").GetComponent<SpriteRenderer>();
+        if (pMidKey == null)
+            pMidKey = GameObject.Find("mid key (player)").GetComponent<SpriteRenderer>();
+        if (pBotKey == null)
+            pBotKey = GameObject.Find("bot key (player)").GetComponent<SpriteRenderer>();
+
+        fightBar = GameObject.Find("fight victory slider").transform;
+
+        fightScreen.SetActive(false);
 
         switch (player.interest){
             case 0:
@@ -143,6 +253,36 @@ public class PlayerMovement : MonoBehaviour {
     } 
     void Update(){
 
+        if(opponentName== null)
+        {
+            opponentName = GameObject.Find("opponent fight name").GetComponent<SpriteRenderer>();
+        }
+        if (oTopRend == null)
+            oTopRend = GameObject.Find("top button (opponent)").GetComponent<SpriteRenderer>();
+        if (oMidRend == null)
+            oMidRend = GameObject.Find("mid button (opponent)").GetComponent<SpriteRenderer>();
+        if (oBotRend == null)
+            oBotRend = GameObject.Find("bot button (opponent)").GetComponent<SpriteRenderer>();
+        if (oTopKey == null)
+            oTopKey = GameObject.Find("top key (opponent)").GetComponent<SpriteRenderer>();
+        if (oMidKey == null)
+            oMidKey = GameObject.Find("mid key (opponent)").GetComponent<SpriteRenderer>();
+        if (oBotKey == null)
+            oBotKey = GameObject.Find("bot key (opponent)").GetComponent<SpriteRenderer>();
+
+        if (pTopRend == null)
+            pTopRend = GameObject.Find("top button (player)").GetComponent<SpriteRenderer>();
+        if (pMidRend == null)                       
+            pMidRend = GameObject.Find("mid button (player)").GetComponent<SpriteRenderer>();
+        if (pBotRend == null)                       
+            pBotRend = GameObject.Find("bot button (player)").GetComponent<SpriteRenderer>();
+        if (pTopKey == null)
+            pTopKey = GameObject.Find("top key (player)").GetComponent<SpriteRenderer>();
+        if (pMidKey == null)                    
+            pMidKey = GameObject.Find("mid key (player)").GetComponent<SpriteRenderer>();
+        if (pBotKey == null)                    
+            pBotKey = GameObject.Find("bot key (player)").GetComponent<SpriteRenderer>();
+
         if (frozen == false){
             for (int i = 0; i < npcs.Length; i++){
                 NPCMovement npcMove = npcs[i].GetComponent<NPCMovement>();
@@ -155,9 +295,369 @@ public class PlayerMovement : MonoBehaviour {
             
             MovePlayer();
         }
+
+        if(fighting)
+            Fighting();
+    }
+
+    private void Fighting()
+    {
+        fightBar.localPosition = new Vector3(Mathf.Lerp(-3.5f, 3.5f, (score + 50) / 100), 0);
+
+        DrawOpponentFightKey();
+        DrawPlayerFightKey();
+
+        // Opponent key presses
+        opponentTimer -= Time.deltaTime;
+        if(opponentTimer < 0)
+        {
+            opponentTimer = secondsPerOpponentPress;
+            int dif = player.hostility - npcs[currentOpponent].GetComponent<NPCInfo>().hostility;
+            if (dif == 0)
+                score += 1;
+            else if (dif == 1)
+                score += 1;
+            else if (dif == 2)
+                score += 1f;
+            else if (dif == 3)
+                score += 1f;
+            else if (dif == 4)
+                score += 1f;
+            else if (dif == 5)
+                score += 1f;
+            else if (dif == 6)
+                score += 1f;
+            else if (dif == -1)
+                score += 1.1f;
+            else if (dif == -2)
+                score += 1.66f;
+            else if (dif == -3)
+                score += 2.307f;
+            else if (dif == -4)
+                score += 2.66f;
+            else if (dif == -5)
+                score += 2.94f;
+            else if (dif == -6)
+                score += 3.16f;
+        }
+
+        switch(npcs[currentOpponent].GetComponent<NPCInfo>().savvy)
+        {
+            case 0:
+                opponentAttackTimer += 1f / 3f * Time.deltaTime;
+                break;
+            case 1:
+                opponentAttackTimer += 1f / 2.5f * Time.deltaTime;
+                break;
+            case 2:
+                opponentAttackTimer += 1f / 2.2f * Time.deltaTime;
+                break;
+            case 3:
+                opponentAttackTimer += 1f / 2f * Time.deltaTime;
+                break;
+            case 4:
+                opponentAttackTimer += 1f / 1.8f * Time.deltaTime;
+                break;
+            case 5:
+                opponentAttackTimer += 1f / 1.5f * Time.deltaTime;
+                break;
+            case 6:
+                opponentAttackTimer += 1f / 1.2f * Time.deltaTime;
+                break;
+        }
+        if (opponentAttackTimer > 1f && oSwitch == null)
+        {
+            oSwitch = StartCoroutine(OpponenetSwitch());
+        }
+
+        // Player key presses
+        if(Input.GetKeyDown(pKeyCode))
+        {
+            int dif = npcs[currentOpponent].GetComponent<NPCInfo>().hostility - player.hostility;
+            if (dif == 0)
+                score -= 1;
+            else if (dif == 1)
+                score -= 1;
+            else if (dif == 2)
+                score -= 1f;
+            else if (dif == 3)
+                score -= 1f;
+            else if (dif == 4)
+                score -= 1f;
+            else if (dif == 5)
+                score -= 1f;
+            else if (dif == 6)
+                score -= 1f;
+            else if (dif == -1)
+                score -= 1.1f;
+            else if (dif == -2)
+                score -= 1.66f;
+            else if (dif == -3)
+                score -= 2.307f;
+            else if (dif == -4)
+                score -= 2.66f;
+            else if (dif == -5)
+                score -= 2.94f;
+            else if (dif == -6)
+                score -= 3.16f;
+        }
+
+        switch (player.savvy)
+        {
+            case 0:
+                playerAttackTimer += 1f / 3f * Time.deltaTime;
+                break;
+            case 1:
+                playerAttackTimer += 1f / 2.5f * Time.deltaTime;
+                break;
+            case 2:
+                playerAttackTimer += 1f / 2.2f * Time.deltaTime;
+                break;
+            case 3:
+                playerAttackTimer += 1f / 2f * Time.deltaTime;
+                break;
+            case 4:
+                playerAttackTimer += 1f / 1.8f * Time.deltaTime;
+                break;
+            case 5:
+                playerAttackTimer += 1f / 1.5f * Time.deltaTime;
+                break;
+            case 6:
+                playerAttackTimer += 1f / 1.2f * Time.deltaTime;
+                break;
+        }
+
+        if(playerAttackTimer > 1f && Input.anyKeyDown)
+        {
+            KeyCode n = KeyCode.Space;
+            foreach(KeyCode k in System.Enum.GetValues(typeof(KeyCode)))
+            {
+                if (Input.GetKeyDown(k))
+                    n = k;
+            }
+
+            pKeyCode = n;
+
+            StartCoroutine(Stun());
+        }
+
+        if (score >= 50)
+        {
+            ResolveFight(currentOpponent, 1);
+            fighting = false;
+        }
+        else if (score <= -50)
+        {
+            ResolveFight(currentOpponent, 0);
+            fighting = false;
+        }
+    }
+
+    private IEnumerator Stun()
+    {
+        float waitTime = 2f;
+
+        int bond = npcs[currentOpponent].GetComponent<NPCInfo>().rivalries[0];
+
+        if (bond >= 12)
+            waitTime -= 1.2f;
+        else if (bond >= 11)
+            waitTime -= 1.5f;
+        else if (bond >= 9)
+            waitTime -= 1f;
+        else if (bond >= 7)
+            waitTime -= 0.8f;
+        else if (bond >= 4)
+            waitTime -= 0.6f;
+
+        oStunned = true;
+
+        yield return new WaitForSeconds(waitTime);
+
+        oStunned = false;
+        oRow = pRow();
+        oKey = pKey();
+
+        playerAttackTimer = 0;
+
+        yield return null;
+    }
+
+    private IEnumerator OpponenetSwitch()
+    {
+        float waitTime = Random.Range(1f, 4f);
+
+        int newRow = Random.Range(0, 3);
+        while(newRow == oRow)
+        {
+            newRow = Random.Range(0, 3);
+        }
+
+        int newKey = newRow == 2 ? Random.Range(0, 10) : Random.Range(1, 11);
+
+        yield return new WaitForSeconds(waitTime);
+
+        int bond = npcs[currentOpponent].GetComponent<NPCInfo>().rivalries[0];
+
+        oRow = newRow;
+        oKey = newKey;
+
+        pKeyCode = oKeyCode();
+
+        opponentAttackTimer = 0;
+
+        oSwitch = null;
+
+        yield return null;
+    }
+
+    private void DrawOpponentFightKey()
+    {
+        switch(oRow)
+        {
+            case 0:
+                oTopRend.sprite = score > 0 ? oWinning : oLosing;
+                oMidRend.sprite = oInactive;
+                oBotRend.sprite = oInactive;
+
+                Sprite s = questionMark;
+
+                foreach (Sprite sprite in fightCharacters)
+                {
+                    if (oKeyCode().ToString().ToLower() == sprite.name || (oKeyCode() == KeyCode.Period && sprite.name == "period"))
+                    {
+                        s = sprite;
+                        break;
+                    }
+
+                }
+
+                oTopKey.sprite = s;
+                oMidKey.sprite = questionMark;
+                oBotKey.sprite = questionMark;
+
+                break;
+            case 1:
+                oTopRend.sprite = oInactive;
+                oMidRend.sprite = score > 0 ? oWinning : oLosing;
+                oBotRend.sprite = oInactive;
+
+                Sprite p = questionMark;
+
+                foreach (Sprite sprite in fightCharacters)
+                {
+                    if (oKeyCode().ToString().ToLower() == sprite.name || (oKeyCode() == KeyCode.Period && sprite.name == "period"))
+                    {
+                        p = sprite;
+                        break;
+                    }
+
+                }
+
+                oTopKey.sprite = questionMark;
+                oMidKey.sprite = p;
+                oBotKey.sprite = questionMark;
+                break;
+            case 2:
+                oTopRend.sprite = oInactive;
+                oMidRend.sprite = oInactive;
+                oBotRend.sprite = score > 0 ? oWinning : oLosing;
+
+                Sprite r = questionMark;
+
+                foreach (Sprite sprite in fightCharacters)
+                {
+                    if (oKeyCode().ToString().ToLower() == sprite.name || (oKeyCode() == KeyCode.Period && sprite.name == "period"))
+                    {
+                        r = sprite;
+                        break;
+                    }
+
+                }
+
+                oTopKey.sprite = questionMark;
+                oMidKey.sprite = questionMark;
+                oBotKey.sprite = r;
+                break;
+        }
+    }
+
+    private void DrawPlayerFightKey()
+    {
+        switch (pRow())
+        {
+            case 0:
+                pTopRend.sprite = score < 0 ? pWinning : pLosing;
+                pMidRend.sprite = pInactive;
+                pBotRend.sprite = pInactive;
+
+                Sprite s = questionMark;
+
+                foreach (Sprite sprite in fightCharacters)
+                {
+                    if (pKeyCode.ToString().ToLower() == sprite.name || (pKeyCode == KeyCode.Period && sprite.name == "period"))
+                    {
+                        s = sprite;
+                        break;
+                    }
+
+                }
+
+                pTopKey.sprite = s;
+                pMidKey.sprite = questionMark;
+                pBotKey.sprite = questionMark;
+
+                break;
+            case 1:
+                pTopRend.sprite = pInactive;
+                pMidRend.sprite = score < 0 ? pWinning : pLosing;
+                pBotRend.sprite = pInactive;
+
+                Sprite p = questionMark;
+
+                foreach (Sprite sprite in fightCharacters)
+                {
+                    if (pKeyCode.ToString().ToLower() == sprite.name || (pKeyCode == KeyCode.Period && sprite.name == "period"))
+                    {
+                        p = sprite;
+                        break;
+                    }
+
+                }
+
+                pTopKey.sprite = questionMark;
+                pMidKey.sprite = p;
+                pBotKey.sprite = questionMark;
+                break;
+            case 2:
+                pTopRend.sprite = pInactive;
+                pMidRend.sprite = pInactive;
+                pBotRend.sprite = score < 0 ? pWinning : pLosing;
+
+                Sprite r = questionMark;
+
+                foreach (Sprite sprite in fightCharacters)
+                {
+                    if (pKeyCode.ToString().ToLower() == sprite.name || (pKeyCode == KeyCode.Period && sprite.name == "period"))
+                    {
+                        r = sprite;
+                        break;
+                    }
+
+                }
+
+                pTopKey.sprite = questionMark;
+                pMidKey.sprite = questionMark;
+                pBotKey.sprite = r;
+                break;
+        }
     }
 
     public IEnumerator Fight(float waitTime, int opponent){
+
+        currentOpponent = opponent;
+        score = 0;
+
         // log that we're fighting
         Debug.Log("(PLAYER FIGHT) waiting! " + Time.time);
         fighting = true;
@@ -173,7 +673,9 @@ public class PlayerMovement : MonoBehaviour {
         oRow = Random.Range(0, 3);
         oKey = oRow == 2 ? Random.Range(0, 10) : Random.Range(1, 11);
 
-        yield return new WaitForSeconds(waitTime);
+        pKeyCode = oKeyCode();
+
+        yield return new WaitUntil(() => fighting == false);
 
         // close the fighting screen
         fightScreen.SetActive(false);
@@ -286,5 +788,4 @@ public class PlayerMovement : MonoBehaviour {
     public void Resume(){
         frozen = false;
     }
-
 }
