@@ -302,7 +302,12 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Fighting()
     {
-        fightBar.localPosition = new Vector3(Mathf.Lerp(-3.5f, 3.5f, (score + 50) / 100), 0);
+        float lerpValue = (score+50)/100;
+        fightBar.localPosition = new Vector3(Mathf.Lerp(3.5f, -3.5f, lerpValue), 0);
+        Transform playerBar = fightBar.GetChild(0).GetChild(1);
+        Transform opponentBar = fightBar.GetChild(0).GetChild(0);
+        playerBar.transform.localScale = new Vector3(Mathf.Lerp(345*2,0,lerpValue), 33.75f, 1);
+        opponentBar.transform.localScale = new Vector3(Mathf.Lerp(0,345*2,lerpValue), 33.75f, 1);
 
         DrawOpponentFightKey();
         DrawPlayerFightKey();
@@ -371,8 +376,10 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         // Player key presses
+        Debug.Log("A");
         if(Input.GetKeyDown(pKeyCode))
         {
+            Debug.Log("B");
             int dif = npcs[currentOpponent].GetComponent<NPCInfo>().hostility - player.hostility;
             if (dif == 0)
                 score -= 1;
@@ -493,7 +500,20 @@ public class PlayerMovement : MonoBehaviour {
             newRow = Random.Range(0, 3);
         }
 
-        int newKey = newRow == 2 ? Random.Range(0, 10) : Random.Range(1, 11);
+        int newKey = 0;
+        if(newRow == 0)
+        {
+            newKey = Random.Range(0, topRowKeys.Length-1);
+        }
+        if (newRow == 1)
+        {
+            newKey = Random.Range(0, midRowKeys.Length-1);
+
+        }
+        if (newRow == 2)
+        {
+            newKey = Random.Range(0, botRowKeys.Length-1);
+        }
 
         yield return new WaitForSeconds(waitTime);
 
@@ -671,8 +691,20 @@ public class PlayerMovement : MonoBehaviour {
 
         // Opponent picks a random key in a random row
         oRow = Random.Range(0, 3);
-        oKey = oRow == 2 ? Random.Range(0, 10) : Random.Range(1, 11);
+        oKey = 0;
+        if (oRow == 0)
+        {
+            oKey = Random.Range(0, topRowKeys.Length - 1);
+        }
+        if (oRow == 1)
+        {
+            oKey = Random.Range(0, midRowKeys.Length - 1);
 
+        }
+        if (oRow == 2)
+        {
+            oKey = Random.Range(0, botRowKeys.Length - 1);
+        }
         pKeyCode = oKeyCode();
 
         yield return new WaitUntil(() => fighting == false);
