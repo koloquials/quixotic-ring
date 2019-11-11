@@ -113,6 +113,7 @@ public class PlayerMovement : MonoBehaviour {
     private int currentOpponent;
 
     private Coroutine oSwitch;
+    public Dialog intro_fight;
 
     void Start(){
         Vector2 currentPos = transform.position;
@@ -753,6 +754,7 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
+            npcs[opponent].GetComponent<NPCMovement>().lost_fight_dialogue.gameObject.SetActive(true);
         } else if (i == 1){ //lose
             npcs[opponent].GetComponent<NPCInfo>().frustration = npcs[opponent].GetComponent<NPCMovement>().residualWinFrustration;
             npcs[opponent].GetComponent<NPCInfo>().rivalries[0] += loseTargetRivalryFactor + npcs[opponent].GetComponent<NPCMovement>().winRivalryFactor;
@@ -777,15 +779,19 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
+            npcs[opponent].GetComponent<NPCMovement>().won_fight_dialogue.gameObject.SetActive(true);
         }
     }
 
     void MovePlayer(){
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        transform.eulerAngles = Vector3.zero;
         if (moveHorizontal > 0f){
             player.spriteRenderer.flipX = true;
+            transform.eulerAngles = new Vector3(0, 0, Mathf.Sin(Time.time * 10) * 7);
         } else if (moveHorizontal < 0f){
             player.spriteRenderer.flipX = false;
+            transform.eulerAngles = new Vector3(0, 0, Mathf.Sin(Time.time * 10) * 7);
         }
 
         Vector2 currentPos = transform.position;

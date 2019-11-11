@@ -17,10 +17,11 @@ public class Dialog : MonoBehaviour
     private Coroutine coroutine;
     private bool typing = false;
 
-    public enum FinishBehavior { LOAD_SCENE, CLOSE };
+    public enum FinishBehavior { LOAD_SCENE, CLOSE,START_FIGHT };
     public FinishBehavior finishBehavior;
 
     public int sceneToLoad;
+    public bool done;
 
     void Start()
     {
@@ -41,6 +42,7 @@ public class Dialog : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.R) && idx == script.Length - 1)
         {
+            idx = 0;
             switch (finishBehavior)
             {
                 case FinishBehavior.LOAD_SCENE:
@@ -48,6 +50,9 @@ public class Dialog : MonoBehaviour
                     break;
                 case FinishBehavior.CLOSE:
                     gameObject.SetActive(false);
+                    break;
+                case FinishBehavior.START_FIGHT:
+                    done = true;
                     break;
             }
         }
