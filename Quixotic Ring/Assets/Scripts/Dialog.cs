@@ -33,6 +33,7 @@ public class Dialog : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.R) && typing)
         {
+            AudioManager.instance.PlaySound("next");
             typing = false;
             StopCoroutine(coroutine);
             textMesh.text = goalText;
@@ -42,6 +43,7 @@ public class Dialog : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.R) && idx == script.Length - 1)
         {
+            AudioManager.instance.PlaySound("next");
             idx = 0;
             switch (finishBehavior)
             {
@@ -58,6 +60,7 @@ public class Dialog : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.R) && !typing)
         {
+            AudioManager.instance.PlaySound("next");
             idx++;
             coroutine = StartCoroutine(ShowText());
         }

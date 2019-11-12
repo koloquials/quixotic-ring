@@ -8,6 +8,7 @@ public class BackArrow : MonoBehaviour {
     public GameObject lastScreen;
 
     void OnMouseDown(){
+        AudioManager.instance.PlaySound("pageturn");
         lastScreen.SetActive(true);
         currentScreen.SetActive(false);
     }

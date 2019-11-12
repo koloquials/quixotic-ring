@@ -115,6 +115,11 @@ public class PlayerMovement : MonoBehaviour {
     private Coroutine oSwitch;
     public Dialog intro_fight;
 
+    public Sprite[] poses;
+    public SpriteRenderer showPose;
+    public SpriteRenderer attackBar;
+    public SpriteRenderer opponentAttackBar;
+
     void Start(){
         Vector2 currentPos = transform.position;
         player = GetComponent<PlayerInfo>();
@@ -159,6 +164,17 @@ public class PlayerMovement : MonoBehaviour {
             pMidKey = GameObject.Find("mid key (player)").GetComponent<SpriteRenderer>();
         if (pBotKey == null)
             pBotKey = GameObject.Find("bot key (player)").GetComponent<SpriteRenderer>();
+        if (showPose == null)
+            showPose = GameObject.Find("fight poses").GetComponent<SpriteRenderer>();
+        if(attackBar == null)
+        {
+            GameObject temp = GameObject.Find("player attack bar");
+            attackBar = temp.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        }if(opponentAttackBar == null)
+        {
+            GameObject temp = GameObject.Find("opponent attack bar");
+            opponentAttackBar = temp.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        }
 
         fightBar = GameObject.Find("fight victory slider").transform;
 
@@ -317,6 +333,7 @@ public class PlayerMovement : MonoBehaviour {
         opponentTimer -= Time.deltaTime;
         if(opponentTimer < 0)
         {
+            AudioManager.instance.PlaySound("push_npc");
             opponentTimer = secondsPerOpponentPress;
             int dif = player.hostility - npcs[currentOpponent].GetComponent<NPCInfo>().hostility;
             if (dif == 0)
@@ -371,16 +388,19 @@ public class PlayerMovement : MonoBehaviour {
                 opponentAttackTimer += 1f / 1.2f * Time.deltaTime;
                 break;
         }
+        if (opponentAttackBar)
+        {
+            opponentAttackBar.transform.localScale = new Vector3(Mathf.Lerp(0f, 128f, opponentAttackTimer), attackBar.transform.localScale.y, attackBar.transform.localScale.z);
+        }
         if (opponentAttackTimer > 1f && oSwitch == null)
         {
             oSwitch = StartCoroutine(OpponenetSwitch());
         }
 
         // Player key presses
-        Debug.Log("A");
         if(Input.GetKeyDown(pKeyCode))
         {
-            Debug.Log("B");
+            AudioManager.instance.PlaySound("push_player");
             int dif = npcs[currentOpponent].GetComponent<NPCInfo>().hostility - player.hostility;
             if (dif == 0)
                 score -= 1;
@@ -410,6 +430,7 @@ public class PlayerMovement : MonoBehaviour {
                 score -= 3.16f;
         }
 
+        float oldTimer = playerAttackTimer;
         switch (player.savvy)
         {
             case 0:
@@ -434,6 +455,15 @@ public class PlayerMovement : MonoBehaviour {
                 playerAttackTimer += 1f / 1.2f * Time.deltaTime;
                 break;
         }
+        //display attack bir
+        if (attackBar)
+        {
+            attackBar.transform.localScale = new Vector3(Mathf.Lerp(0f,128f,playerAttackTimer), attackBar.transform.localScale.y, attackBar.transform.localScale.z);
+        }
+        if(playerAttackTimer > 1f && oldTimer < 1f)
+        {
+            AudioManager.instance.PlaySound("barfull");
+        }
 
         if(playerAttackTimer > 1f && Input.anyKeyDown)
         {
@@ -447,6 +477,40 @@ public class PlayerMovement : MonoBehaviour {
             pKeyCode = n;
 
             StartCoroutine(Stun());
+        }
+        //DRAW poses
+        showPose.sprite = poses[0];
+        if(score >= 0)
+        {
+            //enemy winning
+            if(oRow == 0)
+            {
+                showPose.sprite = poses[5];
+            }
+            else if(oRow == 1)
+            {
+                showPose.sprite = poses[4];
+            }
+            else
+            {
+                showPose.sprite = poses[3];
+            }
+        }
+        else
+        {
+            //player winning
+            if (oRow == 0)
+            {
+                showPose.sprite = poses[2];
+            }
+            else if (oRow == 1)
+            {
+                showPose.sprite = poses[1];
+            }
+            else
+            {
+                showPose.sprite = poses[0];
+            }
         }
 
         if (score >= 50)
@@ -496,6 +560,7 @@ public class PlayerMovement : MonoBehaviour {
         float waitTime = Random.Range(1f, 4f);
 
         int newRow = Random.Range(0, 3);
+        AudioManager.instance.PlaySound("switch");
         while(newRow == oRow)
         {
             newRow = Random.Range(0, 3);
@@ -754,6 +819,7 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
+            AudioManager.instance.PlaySound("victory");
             npcs[opponent].GetComponent<NPCMovement>().lost_fight_dialogue.gameObject.SetActive(true);
         } else if (i == 1){ //lose
             npcs[opponent].GetComponent<NPCInfo>().frustration = npcs[opponent].GetComponent<NPCMovement>().residualWinFrustration;
@@ -779,6 +845,7 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
+            AudioManager.instance.PlaySound("defeat");
             npcs[opponent].GetComponent<NPCMovement>().won_fight_dialogue.gameObject.SetActive(true);
         }
     }

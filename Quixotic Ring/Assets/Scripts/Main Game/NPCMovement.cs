@@ -299,6 +299,8 @@ public class NPCMovement : MonoBehaviour {
                 // note that i'm fighting the player
                 fightingPlayer = true;
                 start_fight_dialogue.gameObject.SetActive(true);
+                AudioManager.instance.PlaySound("next");
+                AudioManager.instance.PlaySound("pageturn");
                 // on the player start the fight coroutine passing a random wait time and my rivalKe
             }
 
@@ -310,6 +312,7 @@ public class NPCMovement : MonoBehaviour {
                     Debug.Log(rand);
                     // pick if we fight based on our rivalry
                     if (rand >= 80f){
+                        AudioManager.instance.PlaySound("barfull");
                         Debug.Log("[PLAYER] fight!!!");
 
                         // face the player

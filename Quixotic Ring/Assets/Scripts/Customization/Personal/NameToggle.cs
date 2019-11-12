@@ -19,6 +19,7 @@ public class NameToggle : MonoBehaviour{
     }
 
     void OnMouseDown() {
+        AudioManager.instance.PlaySound("select");
         if (sprite == 2) {
             sprite = 0;
         } else {

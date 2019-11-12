@@ -15,6 +15,7 @@ public class HelpEnter : MonoBehaviour {
     }
 	
 	void OnMouseDown(){
+        AudioManager.instance.PlaySound("pageturn");
         helpScreen.SetActive(true);
     }
 
