@@ -63,6 +63,7 @@ public class NPCMovement : MonoBehaviour {
 
     public GameObject[] othernpcs = new GameObject[6];
     public Dialog start_fight_dialogue;
+    public Dialog ask_fight_dialogue;
     public Dialog won_fight_dialogue;
     public Dialog lost_fight_dialogue;
 
@@ -333,7 +334,9 @@ public class NPCMovement : MonoBehaviour {
                         Freeze();
                         fightingPlayer = true;
 
-                        player.GetComponent<PlayerMovement>().fight = StartCoroutine(player.GetComponent<PlayerMovement>().Fight(Random.Range(8, 14), npc.rivalKey - 1));
+                        ask_fight_dialogue.gameObject.SetActive(true);
+                        AudioManager.instance.PlaySound("next");
+                        AudioManager.instance.PlaySound("pageturn");
                     }
                 }
             }
@@ -390,6 +393,12 @@ public class NPCMovement : MonoBehaviour {
             player.GetComponent<PlayerMovement>().fight = StartCoroutine(player.GetComponent<PlayerMovement>().Fight(Random.Range(8, 14), npc.rivalKey - 1));
             start_fight_dialogue.done = false;
             start_fight_dialogue.gameObject.SetActive(false);
+        }
+        if (ask_fight_dialogue.done)
+        {
+            player.GetComponent<PlayerMovement>().fight = StartCoroutine(player.GetComponent<PlayerMovement>().Fight(Random.Range(8, 14), npc.rivalKey - 1));
+            ask_fight_dialogue.done = false;
+            ask_fight_dialogue.gameObject.SetActive(false);
         }
 
     }
