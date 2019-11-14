@@ -203,6 +203,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1751673924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751673926}
+  - component: {fileID: 1751673925}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1751673925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751673924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845460c2f63a2cf4da9c5d12e64bb220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPrefab: {fileID: 1862825581235446724, guid: c4a6e750fac1eac42bb362b041448e28,
+    type: 3}
+  sounds: []
+--- !u!4 &1751673926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751673924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 48.745296, y: -0.41908437, z: -14.817144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6536710039741947961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -282,9 +328,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
+      propertyPath: script.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
       propertyPath: script.Array.data[11]
       value: of course, you are free to leave at any instant, we will not keep you.
         we assume you already know how. you knew how to show up, after all.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[0]
+      value: 'hey there, hello! did you get our invite?  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[1]
+      value: hah, of course you did, how else would you have found your way here?
+        to where, you might ask? well.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[2]
+      value: 'kinds from all over join our lovely ring, do battle against fellow patrons.
+        overpowering foes in overwhelming displays of power and finesse.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[3]
+      value: "via wrestling, of course. yes, that\u2019s right, you will be wrestling.
+        \ "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[4]
+      value: 'for what reason do you wish to enter our corridors, we wonder? our invitations
+        always reach wanting hands, whether they know it or not.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[5]
+      value: "did you want a @ prize? did you want to prove yourself the best? or
+        perhaps you just wanted to fight. those were just a few of the reasons we\u2019ve
+        seen. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[6]
+      value: "though, we find you all choose to stay for the same reason, in the end.
+        perhaps you\u2019ll find it too?  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[7]
+      value: 'of course, you are free to leave at any instant. we assume you already
+        know how. you knew how to show up, after all. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[8]
+      value: "and what about us? we\u2019re just the voices in your mind. the writing
+        on the wall. we are here to facilitate and observe. you are here to lead out
+        your whims. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: script.Array.data[9]
+      value: 'thank you for coming. welcome in, new beloved soul! '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}

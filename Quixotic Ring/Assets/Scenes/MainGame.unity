@@ -481,30 +481,31 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: you're new. what are you after, i wonder? well. don't get your hopes
+        up, i'm standing in the way of your dreams, after all. ready to fight when
+        you are.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: 'fight you? hm. sure, if only the prove you''re no match for me. maybe
+        it''ll be entertaining too. let''s go. '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: you're not worth the effort. stop bothering me and fight some others
+        first or something.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: you. are you getting stronger? fight me.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -843,30 +844,31 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: I LOST
+      value: woah there scamp, you're really good at this! these old bones of mine
+        will be better prepared the next time we face off.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: that was a real surprise, you really knocked me off my feet. guess i'll
+        have to train and come back for you. you keep imrpoving too!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: you had be down for the count! it's really so exhilarating to wrestle
+        with you, you're gonna make it far.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: whew, i thought i had you for sure! i'm really proud of your progress.
+        keep it up and let's fight again sometime!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -1265,12 +1267,13 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: hello there, hope i'm not bothering you or anything. ah, if it's okay,
+        i'd love to have another match with you, is that okay?
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -2801,30 +2804,29 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: oh, hello sweetie, pleasure meeting you. i'm clemise. were you looking
+        for a scuffle? i'd be happy to partake.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: another round? sure, i'm feeling up to it. shall we?
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: oh, sorry hun, not at the moment. maybe check back another time?
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: pardon me, dear. would you like to have a match? i'd love to get to know
+        you better, if you're up to it.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -3501,30 +3503,32 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: haha! you really did that! you won! i'm so pissed, but you're a surprising
+        one, you know that? i want a rematch sometime. but, welcome, you deserve it.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: huh. that was a fluke and you know it. i'll get you next time, so don't
+        sleep easy, you hear?
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: damn, good fight. you really had me this time, gah, that really riles
+        me up! it was fun, though.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: that really cleared my sinuses, i gotta pummel you extra hard next time!
+        it was another great fight, and uh, you're great too. i'm glad someone like
+        you is here.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -3566,7 +3570,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: finishBehavior
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -4402,12 +4406,12 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: you. are you getting stronger? fight me.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -5284,30 +5288,31 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: dang, our first battle and i'm already leaving an awful impression, i'll
+        beat you next time for sure! congrats!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: 'oof, you''re strong, really strong! i''m so impressed, and here i thought
+        i was good! '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: again! again! i wanna rematch, right now! actually, i'll cool my jets
+        and let you rest, but ah! i may have lost, but i really enjoyed that!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: haha! ahh that was an amazing match. you really are the best! i'm beyond
+        grateful i met you. please, let's go another round sometime! i'll be waiting!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -5349,7 +5354,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: finishBehavior
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -9444,12 +9449,13 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: could i borrow you for a moment? i'm rather curious to see how you're
+        doing now and would be interested in evaluating you in a spar. may we?
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -10815,30 +10821,31 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: perhaps i was holding back too much. i will not patronize you the next
+        time we go toe to toe, you deserve that. take care, until then.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: the victory is rightfully yours, well done. i'll be off now, until we
+        meet again.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: very good, i'm proud of you! you grow stronger by the minute dear, thank
+        you for letting me witness your progress.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: excellent show, you really bested me. observing you and your time here
+        has made me grow quite fond, you know. let's do this again soon, okay?
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -10880,7 +10887,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: finishBehavior
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -11151,30 +11158,31 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: hey there little one, the name's boreas. do you want to tussle? i won't
+        go easy, now, so let's see what you're made of!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: another fight? sure thing, buddy. let me do some stretches and i'll see
+        you soon!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: cool your jets now, i'm afraid i'm too worn out to fight at the moment.
+        ask again in a little bit.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: how's it going champ. are you doing okay? would you be interested in
+        having a match right now? if not, i can come back later.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -11561,30 +11569,28 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: you're weak. so much for thinking you'd be exciting. later.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: i expected as much from you. you're not worth my time.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: you lost. but you made it interesting, somehow. not bad.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: not unexpected. still, you have a lot going for you. i had fun. thanks
+        for joining the ring.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -11626,7 +11632,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: finishBehavior
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -12125,30 +12131,32 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: oh! hihi a new friend, this is so exciting! i'm riri, i was the newbie
+        before you showed up. i'm always down to fight, prepare to get your world
+        rocked!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: oh my gosh, you wanna fight me? yes, yes, of course! thank you for the
+        opportunity, i swear i'll give it my all!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: you wanna fight? right now? gee, sorry, i'm not really feeling up to
+        it right this instant. but it's me, not you, promise! maybe later!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: hello there, hope i'm not bothering you or anything. ah, if it's okay,
+        i'd love to have another match with you, is that okay?
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -13328,30 +13336,31 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: ah, greetings darling. so good of you to join us, you may call me nadine.
+        i'm very eager to see how you'll fair in our match. hope you impress.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: you'd like to have a match? i would like the same at the moment, yes,
+        we are in alignment. shall we be off?
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: apologies, now isn't the right time. come around on another occassion,
+        please.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: could i borrow you for a moment? i'm rather curious to see how you're
+        doing now and would be interested in evaluating you in a spar. may we?
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -15385,12 +15394,13 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: pardon me, dear. would you like to have a match? i'd love to get to know
+        you better, if you're up to it.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -16178,12 +16188,13 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: hey, you busy? probably not, right? i wanna see how strong you've gotten,
+        how about another fight?
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -16534,30 +16545,28 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: beginner's luck. don't expect this again.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: i won't accept this. goodbye.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: maybe you aren't bad. i admit it when i see it.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: okay. you really are pretty good. i haven't been this into a fight in
+        a while. see you around.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -16599,7 +16608,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: finishBehavior
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -17272,30 +17281,30 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: hey. fresh meat. my name's aeris, pleasure. or it will be, when i beat
+        you into a pulp. just say the word and i'll knock ya into next week. heh.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: yeah, yeah, yeah let's do this! hehe, very brave of you to ask. i want
+        it on record that you asked for this, cause you're about to be served.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: nah scrub, not interested at the moment. cya.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: hey, you busy? probably not, right? i wanna see how strong you've gotten,
+        how about another fight?
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -20779,30 +20788,31 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: I WON
+      value: did you underestimate me or something? i feel like i wiped you clean
+        off the ground! hah! take care now.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: hah, i've still got some fight in me. rematch me in a bit, and we'll
+        see if you've improved then.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: almost! it was close, i think. don't get discouraged now! try, try again
+        as they always say.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: aw, i was confident you'd beat me for sure! you put up quite a fight.
+        that's alright though bud, i'm still cheering you on. till next time!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -22344,30 +22354,32 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: yeah, that's what i thought. try not to cry yourself to sleep too hard
+        tonight. and challenge me again sometime. if you dare. peace out.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: who's the best? i'm the best! no hard feelings, it's just like this around
+        these parts.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: you're slipping, that was all so sloppy of you. you alright? go get your
+        bearings and we'll fight again when you're ready.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: better luck next time my dude. fighting with you is always so rewarding,
+        though, it really gets my blood pumping! heh, i'm glad we met, thanks for
+        showing up.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -22409,7 +22421,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: finishBehavior
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -24530,61 +24542,64 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: "welcome. welcome at last to the ring. it\u2019s our own little venue.
+        and fancy too, right? we\u2019ve created it for all of you. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: 'this is where you mix and mingle, and observe the other competitors
+        going about their individual business and brawls.  '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: "you\u2019ll be taking your own spats to a stage. with an audience and
+        all, though you won\u2019t see them. revel in the knowledge of their presence,
+        or don\u2019t. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: "your %hostility and %savvy will help you in these encounters. as will
+        your opponent\u2019s. meanwhile your %interest$ and %grudge$ determine how
+        much your rivalry grows. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[4]
-      value: "your spats, when you have them you\u2019ll be taking them to a stage.
-        otherwise you\u2019ll spend the whole of your time in this lobby."
+      value: "if you can prove your worth by becoming the greatest rival of everyone
+        here, we\u2019ll give you a @ little something. any wish in our power to grant. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[5]
-      value: "we invite an audience too, you know, though you won\u2019t see them
-        when you\u2019re fighting. revel in the knowledge of their presence, or don\u2019t."
+      value: "battle the others to become their rival. they\u2019ve been given the
+        same offer as you, but, well. maybe you\u2019ll see. they\u2019re eager to
+        get to know you, though. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[6]
-      value: "your %hostility$ and %savvy$ will find use in these encounters. as will
-        your opponent\u2019s. we\u2019ll explain more once you\u2019re in the thick
-        of it."
+      value: "take heed that individuals can only balance a certain number of rivals.
+        you\u2019re our newest addition, and some patrons\u2019 bonds are already
+        deeply ingrained. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[7]
-      value: half of it, your zodiac, was decided long before you found your way here.
-        the other half, we will appraise through a test or your own self-evaluation.
+      value: "also, you will have to ask each other to fight. they may say no if they
+        aren\u2019t riled up at the moment or aren\u2019t keen on you. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[8]
-      value: meanwhile, your %interest$ and %grudge$ determine how much your rivalry
-        with an individual grows. though it also depends on who wins, and who loses.
+      value: "why don\u2019t you request a fight now? try approaching someone. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -24816,30 +24831,32 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: you. you didn't let me win, did you? or maybe you're just new? um, that
+        was a little easy, but good try! we gotta start somewhere! i'm excited to
+        brawl again!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: jeez, are you really this bad? i'm not satisfied! go do some pushups
+        and rematch me!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: gotcha that time! you were so great though! whew! i gotta run some laps
+        to calm down or something, see you next time! yeah!!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: victory is mine! hehe! win or lose aside though, that was thrilling!
+        i'm super glad you showed up, y'know? here's to more fights like this one!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -24881,7 +24898,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: finishBehavior
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -26250,30 +26267,31 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: your form was off. very. but it happens to the best of us. i'd suggest
+        working on it before we next do battle.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: i was better than you, that's why you lost. you should think to improve
+        on you technique, maybe exercise, and then get back to me.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: still a lot that you can invest some effort into, i see. nonetheless,
+        this was a good show. flexing my own skills is fun, on occassion.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: you've gotten better, but there's still a ways to go. i truly enjoy getting
+        to know you better like this. let's have another round sometime.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -26315,7 +26333,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: finishBehavior
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -27170,55 +27188,57 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: first fight!
+      value: 'ah, your first brawl. here, you go head-to-head in a deadlock of wills
+        until a victor emerges victorious.  '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: 'contact begins immediately. mash the indicated key more passionately
+        than your opponent to overtake them. the more %hostile$ you are, the easier
+        this will be. '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: "positioning\u2019s also important in wrestling. when your attack bar
+        fills, mash a key in another row of your keyboard to switch moves and trip
+        up your opponent. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: 'be wary, as the other combatant can do the same. your ability to quickly
+        execute these moves is affected by how %savvy$ you are.  '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[4]
-      value: "your spats, when you have them you\u2019ll be taking them to a stage.
-        otherwise you\u2019ll spend the whole of your time in this lobby."
+      value: "when you get to know someone better, you\u2019ll even be able to preempt
+        their attacks. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[5]
-      value: "we invite an audience too, you know, though you won\u2019t see them
-        when you\u2019re fighting. revel in the knowledge of their presence, or don\u2019t."
+      value: "and that does it. we won\u2019t keep you any longer. there\u2019s much
+        to learn. but how much and what exactly is in your hands. it\u2019s your experience
+        to have. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[6]
-      value: "your %hostility$ and %savvy$ will find use in these encounters. as will
-        your opponent\u2019s. we\u2019ll explain more once you\u2019re in the thick
-        of it."
+      value: "this is the last you\u2019ll likely hear from us, but we will be with
+        you, watching. waiting with anticipation for what will come to be. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[7]
-      value: half of it, your zodiac, was decided long before you found your way here.
-        the other half, we will appraise through a test or your own self-evaluation.
+      value: 'best of luck out there, lovely patron.  '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -30052,30 +30072,31 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: so you're a strong one. duly noted. this was a great learning experience,
+        i have some things to improve on. goodbye for now.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: ah, you'd prevailed. good on you. there's much to think about from this
+        encounter.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: impressive. seems you are the victor of this encounter. i'm interested
+        in seeing how you'll fair in future matchups. stay well now.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: my mistake. it looks like you've won this one. you truly keep me on my
+        toes. i always look forward to when we clash. it's very rewarding.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -30117,7 +30138,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: finishBehavior
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -30468,30 +30489,30 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: are you alright? oh dear, this was our first fight, perhaps i should
+        have gone a little easier. you did well, feel free to come back for a rematch.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: "it\u2019s our own little venue. and fancy too, right? we\u2019ve created
-        it for all of you. "
+      value: you're not hurt, are you? may you have a more fortunate time next we
+        face off.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'this is where you mix and mingle, and observe the other competitors
-        going about their business.  '
+      value: 'you''ll get it next time, i''m sure. it happens. don''t give up, alright? '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: oh, we can't have them all now! but can i say? it's been heartening to
+        see you progress all this time, dear. keep it up, now. until next we spar!
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -30533,7 +30554,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: finishBehavior
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -31587,12 +31608,13 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: welcome. welcome at last to the ring.
+      value: how's it going champ. are you doing okay? would you be interested in
+        having a match right now? if not, i can come back later.
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}

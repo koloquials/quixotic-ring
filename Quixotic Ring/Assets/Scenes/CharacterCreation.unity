@@ -2088,6 +2088,8 @@ MonoBehaviour:
   - {fileID: 21300008, guid: 2e8aac65b96a941988cb30fa761ad8a8, type: 3}
   - {fileID: 21300010, guid: 2e8aac65b96a941988cb30fa761ad8a8, type: 3}
   showPose: {fileID: 0}
+  attackBar: {fileID: 0}
+  opponentAttackBar: {fileID: 0}
 --- !u!50 &312421107
 Rigidbody2D:
   serializedVersion: 4
@@ -4912,61 +4914,63 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[0]
-      value: there you are.
+      value: 'there you are. '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[1]
-      value: in order for you to participate in our ring, we'll have to create a mask
-        for you first.
+      value: "in order for you to participate in our ring, we\u2019ll have to create
+        a mask for you first.  "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[2]
-      value: 'what is a mask? a necessity, if you are to spar with us. it is a combination
-        of two things: your %zodiac$ and your %archetype$.'
+      value: "what\u2019s that? it\u2019s like a persona; a combination of two things:
+        your %zodiac$ and %archetype$. and it\u2019s a necessity, if you want to spar
+        with us.  "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: 'there are parts of you that are your inherent nature, your predisposition.
-        other parts are comprised of your lived values and beliefs. '
+      value: 'there are parts of you determined by your inherent nature and predisposition.
+        other parts are comprised of your lived values and beliefs.  '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[4]
-      value: together, they make you. perhaps, a simplified yet exaggerated representation
-        of you. but you, in some form. hence, a mask.
+      value: 'together, they make you. a simplified, exaggerated representation of
+        you. but you, in some form. hence, a persona. '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[5]
-      value: we won't bore you with the details, but why don't you tap on the little
-        circles with the ?s if you are the curious sort.
+      value: "why don\u2019t you tap on the little circles with the ?s if you are
+        the curious sort. it\u2019s not everyone\u2019s speed. we know that. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[6]
-      value: it's not everyone's speed. we know that. the summary is that you will
-        enter the stage with your newly crafted persona.
+      value: 'the jist is that you will enter the stage with your newly crafted persona.
+        your mask. '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[7]
-      value: half of it, your zodiac, was decided long before you found your way here.
-        the other half, we will appraise through a test or your own self-evaluation.
+      value: 'your zodiac has been decided for you long before you found your way
+        here. the other half, we will appraise through a test or your own self-evaluation.  '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[8]
-      value: ultimately, your mask is your identity here. it will determine your %hostility$,
-        %savvy$, %interest$, and %grudge$. all important, as they affect your performance.
+      value: 'ultimately, your mask is your identity here. it will determine your
+        %hostility$, %savvy$, %interest$, and %grudge$. all important, as they affect
+        your performance. '
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[9]
-      value: that is the nature of this all. go ahead and do that now, and you'll
-        hear from us again soon.
+      value: "go ahead and craft your identity now, and you\u2019ll hear from us again
+        soon. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
