@@ -30,6 +30,7 @@ public class TestButton : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        AudioManager.instance.PlaySound("pageturn");
         testMenu.SetActive(true);
     }
 }

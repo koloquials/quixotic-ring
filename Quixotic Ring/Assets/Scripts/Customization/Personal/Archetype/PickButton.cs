@@ -16,6 +16,7 @@ public class PickButton : MonoBehaviour {
     }
 
     void OnMouseDown(){
+        AudioManager.instance.PlaySound("pageturn");
         pickManager.num = player.archetype; //resets the menu positioning so it doesn't save a reverted state.
         pickAppraisalScreen.SetActive(true);
     }

@@ -18,6 +18,7 @@ public class PrnArrow : MonoBehaviour {
 
     void OnMouseDown(){
         spriteRenderer.sprite = sprites[1];
+        AudioManager.instance.PlaySound("select");
     }
 
     void OnMouseUp()

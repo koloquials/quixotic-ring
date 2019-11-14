@@ -113,6 +113,12 @@ public class PlayerMovement : MonoBehaviour {
     private int currentOpponent;
 
     private Coroutine oSwitch;
+    public Dialog intro_fight;
+
+    public Sprite[] poses;
+    public SpriteRenderer showPose;
+    public SpriteRenderer attackBar;
+    public SpriteRenderer opponentAttackBar;
 
     void Start(){
         Vector2 currentPos = transform.position;
@@ -158,6 +164,17 @@ public class PlayerMovement : MonoBehaviour {
             pMidKey = GameObject.Find("mid key (player)").GetComponent<SpriteRenderer>();
         if (pBotKey == null)
             pBotKey = GameObject.Find("bot key (player)").GetComponent<SpriteRenderer>();
+        if (showPose == null)
+            showPose = GameObject.Find("fight poses").GetComponent<SpriteRenderer>();
+        if(attackBar == null)
+        {
+            GameObject temp = GameObject.Find("player attack bar");
+            attackBar = temp.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        }if(opponentAttackBar == null)
+        {
+            GameObject temp = GameObject.Find("opponent attack bar");
+            opponentAttackBar = temp.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        }
 
         fightBar = GameObject.Find("fight victory slider").transform;
 
@@ -302,7 +319,12 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Fighting()
     {
-        fightBar.localPosition = new Vector3(Mathf.Lerp(-3.5f, 3.5f, (score + 50) / 100), 0);
+        float lerpValue = (score+50)/100;
+        fightBar.localPosition = new Vector3(Mathf.Lerp(3.5f, -3.5f, lerpValue), 0);
+        Transform playerBar = fightBar.GetChild(0).GetChild(1);
+        Transform opponentBar = fightBar.GetChild(0).GetChild(0);
+        playerBar.transform.localScale = new Vector3(Mathf.Lerp(345*2,0,lerpValue), 33.75f, 1);
+        opponentBar.transform.localScale = new Vector3(Mathf.Lerp(0,345*2,lerpValue), 33.75f, 1);
 
         DrawOpponentFightKey();
         DrawPlayerFightKey();
@@ -311,6 +333,7 @@ public class PlayerMovement : MonoBehaviour {
         opponentTimer -= Time.deltaTime;
         if(opponentTimer < 0)
         {
+            AudioManager.instance.PlaySound("push_npc");
             opponentTimer = secondsPerOpponentPress;
             int dif = player.hostility - npcs[currentOpponent].GetComponent<NPCInfo>().hostility;
             if (dif == 0)
@@ -365,6 +388,10 @@ public class PlayerMovement : MonoBehaviour {
                 opponentAttackTimer += 1f / 1.2f * Time.deltaTime;
                 break;
         }
+        if (opponentAttackBar)
+        {
+            opponentAttackBar.transform.localScale = new Vector3(Mathf.Lerp(0f, 128f, opponentAttackTimer), attackBar.transform.localScale.y, attackBar.transform.localScale.z);
+        }
         if (opponentAttackTimer > 1f && oSwitch == null)
         {
             oSwitch = StartCoroutine(OpponenetSwitch());
@@ -373,6 +400,7 @@ public class PlayerMovement : MonoBehaviour {
         // Player key presses
         if(Input.GetKeyDown(pKeyCode))
         {
+            AudioManager.instance.PlaySound("push_player");
             int dif = npcs[currentOpponent].GetComponent<NPCInfo>().hostility - player.hostility;
             if (dif == 0)
                 score -= 1;
@@ -402,6 +430,7 @@ public class PlayerMovement : MonoBehaviour {
                 score -= 3.16f;
         }
 
+        float oldTimer = playerAttackTimer;
         switch (player.savvy)
         {
             case 0:
@@ -426,6 +455,15 @@ public class PlayerMovement : MonoBehaviour {
                 playerAttackTimer += 1f / 1.2f * Time.deltaTime;
                 break;
         }
+        //display attack bir
+        if (attackBar)
+        {
+            attackBar.transform.localScale = new Vector3(Mathf.Lerp(0f,128f,playerAttackTimer), attackBar.transform.localScale.y, attackBar.transform.localScale.z);
+        }
+        if(playerAttackTimer > 1f && oldTimer < 1f)
+        {
+            AudioManager.instance.PlaySound("barfull");
+        }
 
         if(playerAttackTimer > 1f && Input.anyKeyDown)
         {
@@ -439,6 +477,40 @@ public class PlayerMovement : MonoBehaviour {
             pKeyCode = n;
 
             StartCoroutine(Stun());
+        }
+        //DRAW poses
+        showPose.sprite = poses[0];
+        if(score >= 0)
+        {
+            //enemy winning
+            if(oRow == 0)
+            {
+                showPose.sprite = poses[5];
+            }
+            else if(oRow == 1)
+            {
+                showPose.sprite = poses[4];
+            }
+            else
+            {
+                showPose.sprite = poses[3];
+            }
+        }
+        else
+        {
+            //player winning
+            if (oRow == 0)
+            {
+                showPose.sprite = poses[2];
+            }
+            else if (oRow == 1)
+            {
+                showPose.sprite = poses[1];
+            }
+            else
+            {
+                showPose.sprite = poses[0];
+            }
         }
 
         if (score >= 50)
@@ -488,12 +560,26 @@ public class PlayerMovement : MonoBehaviour {
         float waitTime = Random.Range(1f, 4f);
 
         int newRow = Random.Range(0, 3);
+        AudioManager.instance.PlaySound("switch");
         while(newRow == oRow)
         {
             newRow = Random.Range(0, 3);
         }
 
-        int newKey = newRow == 2 ? Random.Range(0, 10) : Random.Range(1, 11);
+        int newKey = 0;
+        if(newRow == 0)
+        {
+            newKey = Random.Range(0, topRowKeys.Length-1);
+        }
+        if (newRow == 1)
+        {
+            newKey = Random.Range(0, midRowKeys.Length-1);
+
+        }
+        if (newRow == 2)
+        {
+            newKey = Random.Range(0, botRowKeys.Length-1);
+        }
 
         yield return new WaitForSeconds(waitTime);
 
@@ -671,8 +757,20 @@ public class PlayerMovement : MonoBehaviour {
 
         // Opponent picks a random key in a random row
         oRow = Random.Range(0, 3);
-        oKey = oRow == 2 ? Random.Range(0, 10) : Random.Range(1, 11);
+        oKey = 0;
+        if (oRow == 0)
+        {
+            oKey = Random.Range(0, topRowKeys.Length - 1);
+        }
+        if (oRow == 1)
+        {
+            oKey = Random.Range(0, midRowKeys.Length - 1);
 
+        }
+        if (oRow == 2)
+        {
+            oKey = Random.Range(0, botRowKeys.Length - 1);
+        }
         pKeyCode = oKeyCode();
 
         yield return new WaitUntil(() => fighting == false);
@@ -721,6 +819,8 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
+            AudioManager.instance.PlaySound("victory");
+            npcs[opponent].GetComponent<NPCMovement>().lost_fight_dialogue.gameObject.SetActive(true);
         } else if (i == 1){ //lose
             npcs[opponent].GetComponent<NPCInfo>().frustration = npcs[opponent].GetComponent<NPCMovement>().residualWinFrustration;
             npcs[opponent].GetComponent<NPCInfo>().rivalries[0] += loseTargetRivalryFactor + npcs[opponent].GetComponent<NPCMovement>().winRivalryFactor;
@@ -745,15 +845,20 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
+            AudioManager.instance.PlaySound("defeat");
+            npcs[opponent].GetComponent<NPCMovement>().won_fight_dialogue.gameObject.SetActive(true);
         }
     }
 
     void MovePlayer(){
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        transform.eulerAngles = Vector3.zero;
         if (moveHorizontal > 0f){
             player.spriteRenderer.flipX = true;
+            transform.eulerAngles = new Vector3(0, 0, Mathf.Sin(Time.time * 10) * 7);
         } else if (moveHorizontal < 0f){
             player.spriteRenderer.flipX = false;
+            transform.eulerAngles = new Vector3(0, 0, Mathf.Sin(Time.time * 10) * 7);
         }
 
         Vector2 currentPos = transform.position;

@@ -9,6 +9,7 @@ public class NextArrow : MonoBehaviour {
     public ResultManager resultManager;
 
     void OnMouseDown(){
+        AudioManager.instance.PlaySound("pageturn");
         nextScreen.SetActive(true);
         resultManager.statsSet = false;
         currentScreen.SetActive(false);

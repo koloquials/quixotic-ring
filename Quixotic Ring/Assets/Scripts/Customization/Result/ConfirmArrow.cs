@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ConfirmArrow : MonoBehaviour {
 
 	void OnMouseDown(){
+        AudioManager.instance.PlaySound("next");
         SceneManager.LoadScene("MainGame", LoadSceneMode.Single);
     }
 }

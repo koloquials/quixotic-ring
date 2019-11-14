@@ -62,6 +62,10 @@ public class NPCMovement : MonoBehaviour {
     public int winRivalryFactor; //interest
 
     public GameObject[] othernpcs = new GameObject[6];
+    public Dialog start_fight_dialogue;
+    public Dialog ask_fight_dialogue;
+    public Dialog won_fight_dialogue;
+    public Dialog lost_fight_dialogue;
 
     void Start(){
         player = GameObject.Find("player");
@@ -265,6 +269,7 @@ public class NPCMovement : MonoBehaviour {
                 if (currentTime < duration){
                     currentTime += 0.1f;
                     currentPos.x += speed * direction * Time.deltaTime;
+                    transform.eulerAngles = new Vector3(0, 0, Mathf.Sin(Time.time*10) * 7);
 
                     if (currentPos.x < -34.65f){
                         currentPos.x = 38.5f;
@@ -281,17 +286,23 @@ public class NPCMovement : MonoBehaviour {
                     //Debug.Log("done walking! " + direction + " | duration: " + currentTime);
                 }
             }
+            else
+            {
+                transform.rotation = Quaternion.identity;
+            }
 
             // if the player is in range and pressed R and you're not already fighting and the player isn't fighting
-            if (inRange && Input.GetKeyDown(KeyCode.R) && fighting == false && fightingPlayer == false){
+            if (inRange && Input.GetKeyDown(KeyCode.R) && fighting == false && fightingPlayer == false && start_fight_dialogue.gameObject.activeSelf == false){
                 // freeze the player
                 player.GetComponent<PlayerMovement>().Freeze();
                 // freeze me
                 Freeze();
                 // note that i'm fighting the player
                 fightingPlayer = true;
-                // on the player start the fight coroutine passing a random wait time and my rivalKey
-                player.GetComponent<PlayerMovement>().fight = StartCoroutine(player.GetComponent<PlayerMovement>().Fight(Random.Range(8, 14), npc.rivalKey - 1));
+                start_fight_dialogue.gameObject.SetActive(true);
+                AudioManager.instance.PlaySound("next");
+                AudioManager.instance.PlaySound("pageturn");
+                // on the player start the fight coroutine passing a random wait time and my rivalKe
             }
 
             // if i'm angry and i'm moving
@@ -302,6 +313,7 @@ public class NPCMovement : MonoBehaviour {
                     Debug.Log(rand);
                     // pick if we fight based on our rivalry
                     if (rand >= 80f){
+                        AudioManager.instance.PlaySound("barfull");
                         Debug.Log("[PLAYER] fight!!!");
 
                         // face the player
@@ -322,7 +334,9 @@ public class NPCMovement : MonoBehaviour {
                         Freeze();
                         fightingPlayer = true;
 
-                        player.GetComponent<PlayerMovement>().fight = StartCoroutine(player.GetComponent<PlayerMovement>().Fight(Random.Range(8, 14), npc.rivalKey - 1));
+                        ask_fight_dialogue.gameObject.SetActive(true);
+                        AudioManager.instance.PlaySound("next");
+                        AudioManager.instance.PlaySound("pageturn");
                     }
                 }
             }
@@ -372,6 +386,19 @@ public class NPCMovement : MonoBehaviour {
         
         if (keepResult && resWaiting == false){
             resultPersist = StartCoroutine(PersistRes(3.8f));
+        }
+        if (start_fight_dialogue.done)
+        {
+            Debug.Log("A");
+            player.GetComponent<PlayerMovement>().fight = StartCoroutine(player.GetComponent<PlayerMovement>().Fight(Random.Range(8, 14), npc.rivalKey - 1));
+            start_fight_dialogue.done = false;
+            start_fight_dialogue.gameObject.SetActive(false);
+        }
+        if (ask_fight_dialogue.done)
+        {
+            player.GetComponent<PlayerMovement>().fight = StartCoroutine(player.GetComponent<PlayerMovement>().Fight(Random.Range(8, 14), npc.rivalKey - 1));
+            ask_fight_dialogue.done = false;
+            ask_fight_dialogue.gameObject.SetActive(false);
         }
 
     }
