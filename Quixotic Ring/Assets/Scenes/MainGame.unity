@@ -24566,9 +24566,9 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.data[3]
-      value: "your %hostility and %savvy will help you in these encounters. as will
-        your opponent\u2019s. meanwhile your %interest$ and %grudge$ determine how
-        much your rivalry grows. "
+      value: "your %hostility$ and %savvy$ will help you in these encounters. as will
+        your opponent\u2019s. meanwhile %interest$ and %grudge$ determine how much
+        your rivalry grows. "
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
