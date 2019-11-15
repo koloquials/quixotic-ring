@@ -22,10 +22,11 @@ public class Dialog : MonoBehaviour
 
     public int sceneToLoad;
     public bool done;
+    public bool dont;//dont do the fight
+    public bool onlyOne;
 
     void Start()
     {
-        idx = 0;
         coroutine = StartCoroutine(ShowText());
     }
 
@@ -61,8 +62,23 @@ public class Dialog : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.R) && !typing)
         {
             AudioManager.instance.PlaySound("next");
-            idx++;
-            coroutine = StartCoroutine(ShowText());
+            if(finishBehavior == FinishBehavior.START_FIGHT)
+            {
+                done = true;
+                if(idx == 2)
+                {
+                    dont = true;
+                }
+            }
+            if (onlyOne)
+            {
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                idx++;
+                coroutine = StartCoroutine(ShowText());
+            }
         }
     }
 

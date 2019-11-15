@@ -66,6 +66,7 @@ public class NPCMovement : MonoBehaviour {
     public Dialog ask_fight_dialogue;
     public Dialog won_fight_dialogue;
     public Dialog lost_fight_dialogue;
+    public bool hasFoughtPlayerBefore;
 
     void Start(){
         player = GameObject.Find("player");
@@ -209,27 +210,37 @@ public class NPCMovement : MonoBehaviour {
 
     void Update(){
         if (frozen == false){
-            // If the player is nearby show the button text
-            if (inRange == true){
-                commandText.SetActive(true);
-            // Otherwise they are hidden and the info screen is closed
-            } else{
-                commandText.SetActive(false);
-                infoBox.SetActive(false);
-                infoActive = false;
-                commandTextRenderer.sprite = cmd[0];
-            }
+            if (!player.GetComponent<PlayerMovement>().reading)
+            {
+                // If the player is nearby show the button text
+                if (inRange == true)
+                {
+                    commandText.SetActive(true);
+                    // Otherwise they are hidden and the info screen is closed
+                }
+                else
+                {
+                    commandText.SetActive(false);
+                    infoBox.SetActive(false);
+                    infoActive = false;
+                    commandTextRenderer.sprite = cmd[0];
+                }
 
-            // Toggles whether the info screen is open
-            if (inRange && Input.GetKeyDown(KeyCode.E) && infoActive == false){
-                infoBox.SetActive(true);
-                infoActive = true;
-                commandTextRenderer.sprite = cmd[1];
-            } else if (inRange && Input.GetKeyDown(KeyCode.E) && infoActive == true) {
-                infoBox.SetActive(false);
-                infoActive = false;
-                commandTextRenderer.sprite = cmd[0];
+                // Toggles whether the info screen is open
+                if (inRange && Input.GetKeyDown(KeyCode.E) && infoActive == false)
+                {
+                    infoBox.SetActive(true);
+                    infoActive = true;
+                    commandTextRenderer.sprite = cmd[1];
+                }
+                else if (inRange && Input.GetKeyDown(KeyCode.E) && infoActive == true)
+                {
+                    infoBox.SetActive(false);
+                    infoActive = false;
+                    commandTextRenderer.sprite = cmd[0];
+                }
             }
+ 
 
             // if your not angry and your not becoming frustrated run the frustrate coroutine
             if (isAngry == false && frustrating == false){
@@ -260,7 +271,7 @@ public class NPCMovement : MonoBehaviour {
             }
 
             // if your moving
-            if (moving){
+            if (moving && !commandText.activeSelf){
                 //Debug.Log("walking! " + direction + " | duration: " + duration);
                 initiateMove = false;
                 Vector2 currentPos = transform.position;
@@ -292,7 +303,7 @@ public class NPCMovement : MonoBehaviour {
             }
 
             // if the player is in range and pressed R and you're not already fighting and the player isn't fighting
-            if (inRange && Input.GetKeyDown(KeyCode.R) && fighting == false && fightingPlayer == false && start_fight_dialogue.gameObject.activeSelf == false){
+            if (inRange && Input.GetKeyDown(KeyCode.R) && !player.GetComponent<PlayerMovement>().reading && fighting == false && fightingPlayer == false && start_fight_dialogue.gameObject.activeSelf == false){
                 // freeze the player
                 player.GetComponent<PlayerMovement>().Freeze();
                 // freeze me
@@ -300,6 +311,59 @@ public class NPCMovement : MonoBehaviour {
                 // note that i'm fighting the player
                 fightingPlayer = true;
                 start_fight_dialogue.gameObject.SetActive(true);
+                if (hasFoughtPlayerBefore)
+                {
+                    if (isAngry)
+                    {
+                        start_fight_dialogue.idx++;
+                    }
+                    else
+                    {
+                        int bond = npc.rivalries[npc.rivalKey];
+                        if(bond < 5)
+                        {
+                            start_fight_dialogue.idx++;
+                        }else if(bond < 9)
+                        {
+                            if (npc.frustration < 90)
+                            {
+                                start_fight_dialogue.idx++;
+                            }
+                            else
+                            {
+                                start_fight_dialogue.idx += 2;
+                            }
+                        }
+                        else if (bond < 11)
+                        {
+                            if (npc.frustration < 80)
+                            {
+                                start_fight_dialogue.idx++;
+                            }
+                            else
+                            {
+                                start_fight_dialogue.idx += 2;
+                            }
+                        }
+                        else if (bond < 13)
+                        {
+                            if (npc.frustration < 70)
+                            {
+                                start_fight_dialogue.idx++;
+                            }
+                            else
+                            {
+                                start_fight_dialogue.idx += 2;
+                            }
+                        }
+                    }
+                    player.GetComponent<PlayerMovement>().firstFight = false;
+                }
+                else
+                {
+                    hasFoughtPlayerBefore = true;
+                    player.GetComponent<PlayerMovement>().firstFight = true;
+                }
                 AudioManager.instance.PlaySound("next");
                 AudioManager.instance.PlaySound("pageturn");
                 // on the player start the fight coroutine passing a random wait time and my rivalKe
@@ -390,7 +454,10 @@ public class NPCMovement : MonoBehaviour {
         if (start_fight_dialogue.done)
         {
             Debug.Log("A");
-            player.GetComponent<PlayerMovement>().fight = StartCoroutine(player.GetComponent<PlayerMovement>().Fight(Random.Range(8, 14), npc.rivalKey - 1));
+            if (!start_fight_dialogue.dont)
+            {
+                player.GetComponent<PlayerMovement>().fight = StartCoroutine(player.GetComponent<PlayerMovement>().Fight(Random.Range(8, 14), npc.rivalKey - 1));
+            }
             start_fight_dialogue.done = false;
             start_fight_dialogue.gameObject.SetActive(false);
         }
