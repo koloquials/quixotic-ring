@@ -4107,8 +4107,8 @@ MonoBehaviour:
   - {fileID: 0}
   start_fight_dialogue: {fileID: 171431335}
   ask_fight_dialogue: {fileID: 993766061}
-  won_fight_dialogue: {fileID: 353422539}
-  lost_fight_dialogue: {fileID: 760291925}
+  won_fight_dialogue: {fileID: 180821021}
+  lost_fight_dialogue: {fileID: 180821021}
   hasFoughtPlayerBefore: 0
 --- !u!1 &289161364
 GameObject:
@@ -14549,18 +14549,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &945074318 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
-    type: 3}
-  m_PrefabInstance: {fileID: 1584421524}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: add6ae127aac0ba4995e39b1109e8157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &945917963
 GameObject:
   m_ObjectHideFlags: 0
@@ -20758,8 +20746,8 @@ MonoBehaviour:
   - {fileID: 0}
   start_fight_dialogue: {fileID: 814667449}
   ask_fight_dialogue: {fileID: 93508094}
-  won_fight_dialogue: {fileID: 326749103}
-  lost_fight_dialogue: {fileID: 337867139}
+  won_fight_dialogue: {fileID: 180821021}
+  lost_fight_dialogue: {fileID: 1034279028}
   hasFoughtPlayerBefore: 0
 --- !u!1 &1277550393
 GameObject:
@@ -22994,8 +22982,8 @@ MonoBehaviour:
   - {fileID: 0}
   start_fight_dialogue: {fileID: 18259781}
   ask_fight_dialogue: {fileID: 298872185}
-  won_fight_dialogue: {fileID: 180821021}
-  lost_fight_dialogue: {fileID: 1034279028}
+  won_fight_dialogue: {fileID: 353422539}
+  lost_fight_dialogue: {fileID: 760291925}
   hasFoughtPlayerBefore: 0
 --- !u!1 &1395645897
 GameObject:
@@ -30405,18 +30393,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1851396693}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1851396696 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
-    type: 3}
-  m_PrefabInstance: {fileID: 1851396693}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: add6ae127aac0ba4995e39b1109e8157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1851396697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31405,8 +31381,8 @@ MonoBehaviour:
   - {fileID: 0}
   start_fight_dialogue: {fileID: 881705217}
   ask_fight_dialogue: {fileID: 676709211}
-  won_fight_dialogue: {fileID: 945074318}
-  lost_fight_dialogue: {fileID: 1851396696}
+  won_fight_dialogue: {fileID: 326749103}
+  lost_fight_dialogue: {fileID: 337867139}
   hasFoughtPlayerBefore: 0
 --- !u!1 &1891503672
 GameObject:
