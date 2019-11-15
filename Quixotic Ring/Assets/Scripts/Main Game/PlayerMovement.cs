@@ -119,8 +119,23 @@ public class PlayerMovement : MonoBehaviour {
     public SpriteRenderer showPose;
     public SpriteRenderer attackBar;
     public SpriteRenderer opponentAttackBar;
+    public bool reading;
+    List<Dialog> dialogs; //gotta have them all to see if any are open
+    public bool firstFight;
 
     void Start(){
+        //get all the dialogs
+        dialogs = new List<Dialog>();
+        Transform parent = Camera.main.transform;
+        foreach(Transform child in parent)
+        {
+            Dialog d = child.GetComponent<Dialog>();
+            if (d)
+            {
+                dialogs.Add(d);
+            }
+        }
+
         Vector2 currentPos = transform.position;
         player = GetComponent<PlayerInfo>();
         currentPos.y = -4.13f;
@@ -268,8 +283,23 @@ public class PlayerMovement : MonoBehaviour {
                 break;
         }
     } 
+    public bool isReading()
+    {
+        //is the player already reading?
+        bool reading = false;
+        for (int i = 0; i < dialogs.Count; i++)
+        {
+            Dialog dialog = dialogs[i];
+            if (dialog.gameObject.activeSelf)
+            {
+                reading = true;
+                break;
+            }
+        }
+        return reading;
+    }
     void Update(){
-
+        reading = isReading();
         if(opponentName== null)
         {
             opponentName = GameObject.Find("opponent fight name").GetComponent<SpriteRenderer>();
@@ -334,7 +364,7 @@ public class PlayerMovement : MonoBehaviour {
         if(opponentTimer < 0)
         {
             AudioManager.instance.PlaySound("push_npc");
-            opponentTimer = secondsPerOpponentPress;
+            opponentTimer = secondsPerOpponentPress*Random.Range(0.75f,1.25f);
             int dif = player.hostility - npcs[currentOpponent].GetComponent<NPCInfo>().hostility;
             if (dif == 0)
                 score += 1;
@@ -464,8 +494,52 @@ public class PlayerMovement : MonoBehaviour {
         {
             AudioManager.instance.PlaySound("barfull");
         }
+        if(playerAttackTimer > 1f)
+        {
+            bool foundOne = false;
+            if(pRow() != 0)//top row
+            {
+                foreach (KeyCode k in topRowKeys)
+                {
+                    if (Input.GetKeyDown(k))
+                    {
+                        pKeyCode = k;
+                        foundOne = true;
+                        playerAttackTimer = 0;
+                        StartCoroutine(Stun());
+                        break;
+                    }
+                }
+            }
+            if (foundOne == false && pRow() != 1)
+            {
+                foreach(KeyCode k in midRowKeys)
+                {
+                    if (Input.GetKeyDown(k))
+                    {
+                        pKeyCode = k;
+                        foundOne = true;
+                        playerAttackTimer = 0;
+                        StartCoroutine(Stun());
+                    }
+                }
+            }
+            if(foundOne == false && pRow() != 2)
+            {
+                foreach(KeyCode k in botRowKeys)
+                {
+                    if (Input.GetKeyDown(k))
+                    {
+                        pKeyCode = k;
+                        foundOne = true;
+                        playerAttackTimer = 0;
+                        StartCoroutine(Stun());
+                    }
+                }
+            }
 
-        if(playerAttackTimer > 1f && Input.anyKeyDown)
+        }
+        /*if(playerAttackTimer > 1f && Input.anyKeyDown)
         {
             KeyCode n = KeyCode.Space;
             foreach(KeyCode k in System.Enum.GetValues(typeof(KeyCode)))
@@ -473,11 +547,13 @@ public class PlayerMovement : MonoBehaviour {
                 if (Input.GetKeyDown(k))
                     n = k;
             }
+            if(n != KeyCode.Space)
+            {
+                pKeyCode = n;
 
-            pKeyCode = n;
-
-            StartCoroutine(Stun());
-        }
+                StartCoroutine(Stun());
+            }
+        }*/
         //DRAW poses
         showPose.sprite = poses[0];
         if(score >= 0)
@@ -820,7 +896,25 @@ public class PlayerMovement : MonoBehaviour {
                 }
             }
             AudioManager.instance.PlaySound("victory");
-            npcs[opponent].GetComponent<NPCMovement>().lost_fight_dialogue.gameObject.SetActive(true);
+            Dialog lost = npcs[opponent].GetComponent<NPCMovement>().lost_fight_dialogue;
+            int bond = npcs[opponent].GetComponent<NPCInfo>().rivalries[opponent];
+            if(true)
+            {
+                if (bond < 7)
+                {
+                    lost.idx = 1;
+                }
+                else if (bond < 12)
+                {
+                    lost.idx = 2;
+                }
+                else
+                {
+                    lost.idx = 3;
+                }
+            }
+            lost.gameObject.SetActive(true);
+
         } else if (i == 1){ //lose
             npcs[opponent].GetComponent<NPCInfo>().frustration = npcs[opponent].GetComponent<NPCMovement>().residualWinFrustration;
             npcs[opponent].GetComponent<NPCInfo>().rivalries[0] += loseTargetRivalryFactor + npcs[opponent].GetComponent<NPCMovement>().winRivalryFactor;
@@ -846,12 +940,34 @@ public class PlayerMovement : MonoBehaviour {
                 }
             }
             AudioManager.instance.PlaySound("defeat");
-            npcs[opponent].GetComponent<NPCMovement>().won_fight_dialogue.gameObject.SetActive(true);
+            Dialog won = npcs[opponent].GetComponent<NPCMovement>().won_fight_dialogue;
+            int bond = npcs[opponent].GetComponent<NPCInfo>().rivalries[opponent];
+            if(true)
+            {
+                if (bond < 7)
+                {
+                    won.idx = 1;
+                }
+                else if (bond < 12)
+                {
+                    won.idx = 2;
+                }
+                else
+                {
+                    won.idx = 3;
+                }
+            }
+            won.gameObject.SetActive(true);
+
         }
     }
 
     void MovePlayer(){
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        if (reading)
+        {
+            moveHorizontal = 0;
+        }
         transform.eulerAngles = Vector3.zero;
         if (moveHorizontal > 0f){
             player.spriteRenderer.flipX = true;

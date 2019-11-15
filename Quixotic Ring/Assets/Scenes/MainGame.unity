@@ -481,7 +481,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -941,6 +941,11 @@ PrefabInstance:
         type: 3}
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -1507,6 +1512,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.2, y: 10.8}
   m_EdgeRadius: 0
+--- !u!114 &93508094 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+    type: 3}
+  m_PrefabInstance: {fileID: 93508090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add6ae127aac0ba4995e39b1109e8157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &106495365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,7 +2821,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -3602,6 +3619,11 @@ PrefabInstance:
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
       objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -4084,9 +4106,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   start_fight_dialogue: {fileID: 171431335}
-  ask_fight_dialogue: {fileID: 0}
+  ask_fight_dialogue: {fileID: 993766061}
   won_fight_dialogue: {fileID: 353422539}
   lost_fight_dialogue: {fileID: 760291925}
+  hasFoughtPlayerBefore: 0
 --- !u!1 &289161364
 GameObject:
   m_ObjectHideFlags: 0
@@ -4645,6 +4668,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.2, y: 10.8}
   m_EdgeRadius: 0
+--- !u!114 &298872185 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+    type: 3}
+  m_PrefabInstance: {fileID: 298872181}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add6ae127aac0ba4995e39b1109e8157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &307143298
 GameObject:
   m_ObjectHideFlags: 0
@@ -5385,6 +5420,11 @@ PrefabInstance:
         type: 3}
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -9689,6 +9729,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.2, y: 10.8}
   m_EdgeRadius: 0
+--- !u!114 &676709211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+    type: 3}
+  m_PrefabInstance: {fileID: 676709207}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add6ae127aac0ba4995e39b1109e8157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &683463061
 GameObject:
   m_ObjectHideFlags: 0
@@ -10919,6 +10971,11 @@ PrefabInstance:
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
       objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -11158,7 +11215,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -11664,6 +11721,11 @@ PrefabInstance:
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
       objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -12131,7 +12193,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -13336,7 +13398,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -15634,6 +15696,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.2, y: 10.8}
   m_EdgeRadius: 0
+--- !u!114 &993766061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+    type: 3}
+  m_PrefabInstance: {fileID: 993766057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add6ae127aac0ba4995e39b1109e8157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &997064345
 GameObject:
   m_ObjectHideFlags: 0
@@ -16428,6 +16502,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.2, y: 10.8}
   m_EdgeRadius: 0
+--- !u!114 &1027794802 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+    type: 3}
+  m_PrefabInstance: {fileID: 1027794798}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add6ae127aac0ba4995e39b1109e8157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1030888506 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6536710038195102045, guid: 71443d00cad01644a8fc210598e83210,
@@ -16639,6 +16725,11 @@ PrefabInstance:
         type: 3}
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -17281,7 +17372,7 @@ PrefabInstance:
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: script.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -20666,9 +20757,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   start_fight_dialogue: {fileID: 814667449}
-  ask_fight_dialogue: {fileID: 0}
+  ask_fight_dialogue: {fileID: 93508094}
   won_fight_dialogue: {fileID: 326749103}
   lost_fight_dialogue: {fileID: 337867139}
+  hasFoughtPlayerBefore: 0
 --- !u!1 &1277550393
 GameObject:
   m_ObjectHideFlags: 0
@@ -20885,6 +20977,11 @@ PrefabInstance:
         type: 3}
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -22453,6 +22550,11 @@ PrefabInstance:
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
       objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -22891,9 +22993,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   start_fight_dialogue: {fileID: 18259781}
-  ask_fight_dialogue: {fileID: 0}
+  ask_fight_dialogue: {fileID: 298872185}
   won_fight_dialogue: {fileID: 180821021}
   lost_fight_dialogue: {fileID: 1034279028}
+  hasFoughtPlayerBefore: 0
 --- !u!1 &1395645897
 GameObject:
   m_ObjectHideFlags: 0
@@ -23610,9 +23713,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   start_fight_dialogue: {fileID: 1384638729}
-  ask_fight_dialogue: {fileID: 0}
+  ask_fight_dialogue: {fileID: 1027794802}
   won_fight_dialogue: {fileID: 1299563989}
   lost_fight_dialogue: {fileID: 259434646}
+  hasFoughtPlayerBefore: 0
 --- !u!212 &1451980135
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24929,6 +25033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -26364,6 +26473,11 @@ PrefabInstance:
         type: 3}
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -30170,6 +30284,11 @@ PrefabInstance:
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
       objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -30585,6 +30704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: script.Array.data[14]
       value: "why don\u2019t you request a fight now? try approaching someone. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+        type: 3}
+      propertyPath: onlyOne
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536710038878951794, guid: 71443d00cad01644a8fc210598e83210,
         type: 3}
@@ -31280,9 +31404,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   start_fight_dialogue: {fileID: 881705217}
-  ask_fight_dialogue: {fileID: 0}
+  ask_fight_dialogue: {fileID: 676709211}
   won_fight_dialogue: {fileID: 945074318}
   lost_fight_dialogue: {fileID: 1851396696}
+  hasFoughtPlayerBefore: 0
 --- !u!1 &1891503672
 GameObject:
   m_ObjectHideFlags: 0
@@ -31848,6 +31973,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.2, y: 10.8}
   m_EdgeRadius: 0
+--- !u!114 &1920093664 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6536710037925526437, guid: 71443d00cad01644a8fc210598e83210,
+    type: 3}
+  m_PrefabInstance: {fileID: 1920093660}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add6ae127aac0ba4995e39b1109e8157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1921661287
 GameObject:
   m_ObjectHideFlags: 0
@@ -33016,9 +33153,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   start_fight_dialogue: {fileID: 778394645}
-  ask_fight_dialogue: {fileID: 0}
+  ask_fight_dialogue: {fileID: 1920093664}
   won_fight_dialogue: {fileID: 1777714820}
   lost_fight_dialogue: {fileID: 35193746}
+  hasFoughtPlayerBefore: 0
 --- !u!1 &2008070198
 GameObject:
   m_ObjectHideFlags: 0

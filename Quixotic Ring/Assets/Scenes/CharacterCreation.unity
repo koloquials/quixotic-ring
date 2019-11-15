@@ -2024,7 +2024,7 @@ MonoBehaviour:
   oKey: 0
   pKeyCode: 0
   score: 0
-  secondsPerOpponentPress: 0.14285715
+  secondsPerOpponentPress: 0.1428571
   opponentAttackTimer: 0
   playerAttackTimer: 0
   oStunned: 0
@@ -2090,6 +2090,7 @@ MonoBehaviour:
   showPose: {fileID: 0}
   attackBar: {fileID: 0}
   opponentAttackBar: {fileID: 0}
+  reading: 0
 --- !u!50 &312421107
 Rigidbody2D:
   serializedVersion: 4
