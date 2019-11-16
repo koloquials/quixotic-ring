@@ -372,7 +372,7 @@ public class NPCMovement : MonoBehaviour {
             // if i'm angry and i'm moving
             if (isAngry && moving){
                 // if the player isn't fighting and I'm near the player 
-                if (player.GetComponent<PlayerMovement>().fighting == false && Mathf.Abs(player.transform.position.x - transform.position.x) <= 4.45f && Mathf.Abs(player.transform.position.x - transform.position.x) >= 4.05f){
+                if (player.GetComponent<PlayerMovement>().reading == false && player.GetComponent<PlayerMovement>().fighting == false && Mathf.Abs(player.transform.position.x - transform.position.x) <= 4.45f && Mathf.Abs(player.transform.position.x - transform.position.x) >= 4.05f){
                     rand = Random.Range(0f, 100f) * (1f + 0.1f * npc.rivalries[0]);
                     Debug.Log(rand);
                     // pick if we fight based on our rivalry
@@ -508,6 +508,7 @@ public class NPCMovement : MonoBehaviour {
     }
 
     void ResolveFight(int i){
+        Resume();
         if (i == 0){ //win
             npc.frustration = residualWinFrustration;
             othernpcs[opponent].GetComponent<NPCInfo>().frustration = othernpcs[opponent].GetComponent<NPCMovement>().residualLoseFrustration;
